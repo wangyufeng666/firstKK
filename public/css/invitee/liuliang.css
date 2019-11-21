@@ -1,0 +1,15 @@
+.header_img .img{display: block;}
+.contact_liuliang{height: 9rem;background: url(/images/meitum/liuliang/background.png) no-repeat;background-size: 100%;}
+.contact_liuliang .text_box{width: 80%;background: #FFED7D;margin: 0 auto;border-radius: 0.1rem;padding-bottom: 0.2rem;}
+.contact_liuliang .text_rule{height: 1.0rem;text-align: center;line-height: 1.0rem;}
+.contact_liuliang .text_rule span{display: block;position: relative;font-size: 0.28rem;color: #F43B44;}
+.contact_liuliang .text_rule span:before, .contact_liuliang .text_rule span:after {content: '';position: absolute;top: 52%;background: #F6385A;width: 15%;height: 2px;}
+.contact_liuliang .text_rule span:before{left: 20%;}
+.contact_liuliang .text_rule span:after {right: 20%;}
+.contact_liuliang .text_box .word_box{padding: 0 0.3rem;}
+.contact_liuliang .text_box .word_box .text{margin-bottom: 0.15rem;}
+.contact_liuliang .text_box .word_box .text div{float: left;color: #F88D5D;line-height: 0.3rem;font-size: 0.22rem;}
+.contact_liuliang .text_box .word_box .text .number{width: 10%;text-align: right;}
+.contact_liuliang .text_box .word_box .text .word{width: 90%;}
+.tel_number{text-align: center;color: #FDCA80;font-size: 0.25rem;margin: 0.2rem 0;}
+.recycle img{display: block;width: 55%;margin: 0 auto}

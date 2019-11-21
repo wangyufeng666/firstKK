@@ -1,0 +1,56 @@
+*{margin:0;padding:0;outline:0;}
+th{padding:2px 6px 0px 6px;text-align:left;height:24px;}
+td{font-size: 13px; text-decoration: none}
+select{background-color:#f9fafc;border-left:#999999 1px solid;border-top:#999999 1px solid;border-right:#c6e1e3 1px solid;border-bottom:#c6e1e3 1px solid;color:#000000;}
+button,input{/*border-left:#999999 1px solid;border-top:#999999 1px solid;border-right:#999999 1px solid;border-bottom:#999999 1px solid;color:#000000;padding-top:1px;*/}
+a:link,a:visited{color:#666666;text-decoration:none;}
+/*
+.tinytable{ width:100%;}
+.tinytable th{ font-weight:normal; text-align:center; font-size:12px; height:28px; line-height:28px; background:#d0d8e9; color:#3a60a5;}
+.tinytable th h3{font-size:12px;font-weight:normal;}
+*/
+#tablewrapper{width:100%;/*margin:0 auto;*/}
+.tinytable{align:center;text-align:center;padding:0px;clip:rect(   ); width:96%;margin-top:4px; background-color:#d0d8e9; border-collapse:collapse;}
+.tinytable th{align:center;background-image:url(/template/images/title1.png);color:#3a60a5;border-right: 1px #c0d1ed solid;}
+.tinytable th h3{font-family: "����"; font-size: 12px; color: #3a60a5; text-decoration: none}
+.tinytable td{background-color: #ffffff;padding-top: 3px; padding-bottom: 3px; padding-left: 3px; border: solid 1px #c0d1ed;}
+.tinytable .evenrow input{background-color:#e6f1f3;border-width:0px;}
+.tinytable .oddrow input{background-color:#f9fafc;border-width:0px;}
+.tinytable .head h3{background:url(/template/images/sort.gif) 3px center no-repeat;cursor:pointer;padding-left:18px;}
+.tinytable .desc{background:#bbc7e0;}/*.sortable, */
+.tinytable .asc{background:#bbc7e0;}
+.tinytable .desc h3{background:url(/template/images/desc.gif) 3px center no-repeat;cursor:pointer;padding-left:18px;}
+.tinytable .asc h3{background:url(/template/images/asc.gif) 3px  center no-repeat;cursor:pointer;padding-left:18px;}
+.tinytable .evenrow td{background-color:#ffffff;}
+.tinytable .oddrow td{background-color:#f0f0f0;}
+.tinytable tfoot{background:#fff;font-weight:bold;}
+.tinytable tfoot td{padding:6px 8px 8px;}
+.tinytable{behavior:url(#default#savehistory);}
+.savehistory {behavior:url(#default#savehistory);}
+#selectedrow td{background:#c6d5e1;}
+.table_search{padding:12px 0px 0px;color:#3e6785;width:96%;height:29px; text-align:left;background-image:url(/template/images/div1.gif)} 
+.table_search .right{text-align:right; width:7em}
+.table_search .left{width:8em}
+.table_search input{height:21px;}
+#edittable{background-color:#fff;background-image:none;color: #333333;border:1px double #999999; border-color: #B9B9B9 #ffffff #ffffff #B9B9B9}
+#edittable input{background-color:#ffffff; font-size: 13px;color: #333333;border: 1px #999999 solid}
+#tableheader {height:55px;width:96%}
+.search {float:left; padding:6px; border:1px solid #c6d5e1; background:#fff}
+#tableheader select {float:left; font-size:12px; width:125px; padding:2px 4px 4px}
+#tableheader input {float:left; font-size:12px; width:100px; padding:2px 4px 4px; margin-left:4px}
+.details {float:right; padding-top:12px}
+.details div {float:left; margin-left:15px; font-size:12px}
+#tablenav {float:left}
+#tablenav img {cursor:pointer}
+#tablenav div {float:left; margin-right:15px;margin-left:15px;margin-top:15px;}
+.page {margin-top:2px; font-size:12px}
+.tdor_list_table {width:100%;height:49px;}
+.tdor_list_right {width:19px;background-image:url(/template/images/top_bg2_r.gif);background-repeat: no-repeat;background-position: right center;float:right;}
+.tdor_list_left {width:19px;background-image:url(/template/images/top_bg2_l.gif);background-repeat: no-repeat;background-position: left center;}
+.tdor_list{height:54px;background-image:url(/template/images/top_bg2.gif);}
+.tabletoplist{align:center;width:100%;height:21px;}
+.tabletop{align:center;width:100%;height:21px;}
+.table_canter {float:left;font-size:13px; color: #ff6600;;width:100%;height:21px;background-image:url(/template/images/table_c.gif);}
+.table_right {width:10px;height:21px;background-image:url(/template/images/table_r.gif);background-repeat: no-repeat;background-position: right center;float:right;}
+.table_left {width:12px;height:21px;background-image:url(/template/images/table_l.gif);background-repeat: no-repeat;background-position: left center;}
+.tablesearch{align:center;width:100%;}

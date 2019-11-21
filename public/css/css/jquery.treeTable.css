@@ -1,0 +1,38 @@
+/* jQuery TreeTable Core 2.0 stylesheet
+ *
+ * This file contains styles that are used to display the tree table. Each tree
+ * table is assigned the +treeTable+ class.
+ * ========================================================================= */
+/* jquery.treeTable.collapsible
+ * ------------------------------------------------------------------------- */
+.treeTable tr td .expander {background-position:left center;background-repeat:no-repeat;cursor:pointer;padding:0;zoom:1;}
+.treeTable tr.collapsed td .expander {background-image:url(/images/toggle-expand-dark.png);}
+.treeTable tr.expanded td .expander {background-image:url(/images/toggle-collapse-dark.png);}
+/* jquery.treeTable.sortable
+ * ------------------------------------------------------------------------- */
+.treeTable tr.selected, .treeTable tr.accept {background-image:url(/images/title1.gif);color:blue;}
+.treeTable tr.collapsed.selected td .expander, .treeTable tr.collapsed.accept td .expander {
+background-image:url(/images/toggle-expand-light.png);
+}
+.treeTable tr.expanded.selected td .expander, .treeTable tr.expanded.accept td .expander {
+background-image:url(/images/toggle-collapse-light.png);
+}
+.treeTable .ui-draggable-dragging {color:#000;z-index:1;} 
+/* Header
+ * ------------------------------------------------------------------------- */
+table thead {/*background-image:url(/images/title1.gif);*/background-color:#A8C7EA;font-size:13px;font-color:black;}
+table thead tr th {font-weight:normal;padding:.3em 0.5em .1em 0.5em;text-align:left;}
+table tbody tr.even {background:#f3f3f3;}
+table tbody tr.odd {background:#fff;}
+table span {background-position:center left;background-repeat:no-repeat;padding:.2em 0 .2em 1.5em;}
+table span.folder {background-image:url(/images/folder.png);}
+table span.file {background-image:url(/images/page_white_text.png);}
+table span.subfile {background-image:url(/images/join.gif);}
+table span.one {background-image:url(/images/treetable-1.png);}
+table span.two {background-image:url(/images/treetable-2.png);}
+table span.three {background-image:url(/images/treetable-3.png);}
+table span.four {background-image:url(/images/treetable-4.png);}
+.HKTreetable{padding:12px 0px 0px;color:black;width:100%;height:29px; text-align:left} 
+.HKTreetable .right{text-align:right; width:7em}
+.HKTreetable .left{width:8em}
+.HKTreetable input{height:21px;}

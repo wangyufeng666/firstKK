@@ -1,0 +1,18 @@
+.model_info {}
+.model_info .mi_image {float:left;text-align:center;position:relative}
+.model_info .mi_info {width:450px;float:left;margin-left:20px}
+.model_info .mi_info .mi_info_name {font-size:16px;font-weight:bold;color:#000}
+.model_info .mi_info .mi_info_info{padding:5px 20px;}
+.model_info .mi_info .mi_info_info {width:500px;}
+.model_info .mi_info .mi_info_info tr {line-height:22px;height:22px;}
+.model_info .mi_info .mi_info_info tr th {font-weight:bold;width:80px;text-align:right;}
+.model_info .mi_info .mi_ensure {line-height:22px;padding-right:15px;display:inline-block; *display:inline; *zoom:1;vertical-align:middle;}
+.model_info .mi_info_text .icon {width:25px;height:25px;background-color:white;float:left;background:url(/images/common/bg_server.png) no-repeat -0px -3px}
+.model_info .mi_info_text .icon1 {background-position:-0px -3px;}
+.model_info .mi_info_text .icon2 {background-position:-25px -3px;}
+.model_info .mi_info_text .icon3 {background-position:-50px -3px;}
+.model_info .mi_info_text .icon4 {background-position:-75px -3px;}
+.property {background-color:#FFF;padding:10px 20px;border:solid 1px #F2F2F2;border-top-width:0;position:relative;}
+.property .icon_detailbg {position:absolute;top:20px;left:-5px}
+.property table {margin:10px 0 0 0}
+.property input {position:relative;top:3px}

@@ -1,0 +1,30 @@
+.header_bg_white{background:#fff;display: none;}
+.header.androidFlag{display: block;}
+.header_bg_white .left .back{background: url(/images/common/icon_header.png)no-repeat -0.37rem 0.05rem;background-size: 0.6rem;}
+.header h1 img{width: 1.0rem;vertical-align: middle;}
+.user_box .user_info{padding: 0.5rem 0.2rem 0.2rem;background: url(/images/user/center/bg_userinfo.png)no-repeat right center;}
+.user_box .user_info .portrait_img{float: left;width: 30%;line-height: 1.5rem;text-align: center;}
+.user_box .user_info .portrait_img img{width: 70%;border-radius: 1.5rem;}
+
+.user_box .user_info .user_name{float: left;width: 70%;padding-top: 0.2rem;line-height: 0.4rem;color: #fff;}
+.user_box .user_info .user_name .name{font-size: 0.3rem;line-height: 0.4rem;}
+.user_box .user_info .user_name .phone{font-size: 0.22rem;height: 0.5rem;}
+.user_box .user_total_account{padding: 0.2rem 0.15rem;border-bottom: 0.2rem solid #eee;background: url(/images/user/center/bg_user_totle_account.png)no-repeat;}
+.user_box .user_total_account .surplus{float: left;width: 33.3%;text-align: center;color: #fff;border-right: 1px solid #ff7691;}
+.user_box .user_total_account a:last-child .surplus{border-right: none;}
+.user_box .user_total_account .text{padding-top: 0.05rem;}
+.user_box .user_total_account .number span{font-size: 0.32rem;font-weight: bold;margin-right: 0.05rem;} 
+.user_list_item{padding-left: 0.3rem;}
+.user_list_item li{padding-left: 0.8rem;}
+.user_list_item .account{background: url(/images/user/center/icon_center02.png)no-repeat left center;background-size: 0.4rem;}
+.user_list_item .order{background: url(/images/user/center/icon_center05.png)no-repeat left center;background-size: 0.4rem;}
+.user_list_item .recommend{background: url(/images/user/center/icon_center04.png)no-repeat left center;background-size: 0.4rem;}
+.user_list_item .integral{background: url(/images/user/center/icon_center03.png)no-repeat left center;background-size: 0.4rem;}
+
+.user_list_item li div{line-height: 1.0rem;border-bottom: 1px solid #e5e5e5;font-size: 0.28rem;padding-right: 0.2rem;background: url(/images/user/center/icon_center06.png)no-repeat 97% center;background-size: 0.2rem;}
+.user_list_item a:last-child li{border-bottom: none;}
+.user_list_item .recommend span{float: right;margin-right: 0.3rem;font-size: 0.22rem;color: #959595;}
+.bottom_banner{margin-top: 0.5rem;}
+.layermmain .layermcont{padding: 0.3rem 1.0rem;}
+.layermmain .layermbtn{height: 0.7rem;line-height: 0.7rem;}
+.layermmain .layermbtn span{height: 0.7rem;line-height: 0.7rem;font-size: 0.24rem;}

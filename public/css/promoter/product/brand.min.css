@@ -1,0 +1,31 @@
+body{max-width:100%;}
+html,body {height:40%}
+.brands{background:#f4f4f4;}
+.brands li.current {background:#fff;color: #ff5a27;}
+.brands li.current span{border-left:3px solid #ff5e5e;padding-left:.1rem;}
+.brands li span{border-left:3px solid #f4f4f4;padding-left:.1rem;font-size:.26rem;}
+.container{max-width:640px;min-width:320px;}
+.brands li {overflow:hidden;border-right:1px solid #e6e6e6;text-align:center;padding:.3rem .2rem;
+white-space:nowrap;text-overflow:ellipsis;height:.9rem;border-bottom:1px solid #e6e6e6;line-height:.3rem;
+}
+#brandWrapper {position:absolute;z-index:1;top:43px;bottom:0;left:0;width:30%;overflow:hidden;}
+#mersWrapper {position:absolute;z-index:1;top:43px;bottom:0;left:30%;width:70%;overflow:hidden;}
+.brandWrapper,.mersWrapper{top:95px !important;}
+#brandScroller, #mersScroller{
+position:absolute;z-index:1;-webkit-tap-highlight-color:rgba(0,0,0,0);width:100%;
+-webkit-transform:translateZ(0);-moz-transform:translateZ(0);-ms-transform:translateZ(0);-o-transform:translateZ(0);transform:translateZ(0);
+-webkit-touch-callout:none;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;
+-webkit-text-size-adjust:none;-moz-text-size-adjust:none;-ms-text-size-adjust:none;-o-text-size-adjust:none;text-size-adjust:none;
+}
+#mersScroller ul {list-style:none;padding:0;margin:0;width:100%;text-align:left;}
+#mersScroller li {border-bottom:1px solid #e6e6e6;background:#fafafa;font-size:.24rem;overflow:hidden;
+height:.9rem;color:#333;white-space:nowrap;text-overflow:ellipsis;line-height:.3rem;padding:.3rem 0 .3rem .3rem;}
+#mersScroller .category {padding-left:1.3rem;font-size:.28rem;font-weight: bold;}
+#pullUp{padding:.3rem 0 .3rem .3rem;color:#333;line-height:.3rem;height:.9rem;font-size:.24rem;}
+.header{position:fixed;z-index:2;top:0;left:0;width:100%;}
+.appMode #brandWrapper{top:0;}
+.appMode #mersWrapper{top:0;}
+.btmmenu{position:absolute;bottom:0px;width:100%;z-index:9999;}
+.mlist{position:absolute;top: 43px;background: #f5f5f5;width:100%;border-bottom:1px solid #c5c5c5;}
+.mlist li{float: left;height: 50px;line-height: 50px;width: 25%;text-align: center;border-bottom: 2px solid #f5f5f5;font-size: 0.3rem;}
+.mlist .active{color: #87CEEB;border-bottom: 2px solid #87CEFA;}

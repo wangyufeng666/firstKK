@@ -1,0 +1,24 @@
+[v-cloak] {
+    display: none;
+}
+.el-header {
+    height:100% !important;
+}
+.header{
+    padding-top:10px;
+    font-size: 28px;
+}
+
+.top-operation{
+    padding-top:15px;
+    padding-bottom:10px;
+    border-bottom: 1px solid #DCDFE6;
+}
+
+.active{
+    color: #409EFF !important;
+}
+
+.main{
+
+}

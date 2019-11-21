@@ -1,0 +1,18 @@
+html{height:100%;}
+body{height:100%;margin:0px;padding:0px;font-family: Trebuchet MS, Lucida Sans Unicode, Arial, sans-serif;}
+#pageContent{width:950px;}
+.ad{margin-top:120px;}
+h1{font-size:0.9em;}
+a:link {color: blue;text-decoration: none} 
+a:visited {color: #FF3399;text-decoration: none} 
+a:hover {color: #800080;text-decoration: underline} 
+a:active {color: #800080;text-decoration: underline} 
+/* Entire pane */
+#navigatorxpPane{background-color:#7190e0;float:left;height:600px;width:200px;}
+#navigatorxpPane .navigatorpanel{margin-left:10px;margin-right:10px;margin-top:10px;}
+#navigatorxpPane .panelContent{font-size:0.7em;background-image:url('/images/bg_pane_right.gif');background-position:top right;background-repeat:repeat-y;border-left:1px solid #FFF;border-bottom:1px solid #FFF;padding-left:2px;padding-right:2px;overflow:hidden;position:relative;clear:both;}
+#navigatorxpPane .panelContent div{position:relative;}
+#navigatorxpPane .navigatorpanel .topBar{background-image:url('/images/bg_panel_top_right.gif');background-repeat:no-repeat;background-position:top right;height:25px;padding-right:5px;cursor:pointer;overflow:hidden;}
+#navigatorxpPane .navigatorpanel .topBar span{line-height:25px;vertical-align:middle;font-family:arial;font-size:0.7em;color:#215DC6;font-weight:bold;float:left;padding-left:5px;}
+#navigatorxpPane .navigatorpanel .topBar img{float:right;cursor:pointer;}
+#otherContent{/* Normal text content */float:left;/* Firefox - to avoid blank white space above panel */padding-left:10px;/* A little space at the left */}

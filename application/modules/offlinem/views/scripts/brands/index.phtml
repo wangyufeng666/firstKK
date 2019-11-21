@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="minimal-ui,width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <title>有得卖线下回收平台</title>
+    <meta name="keywords" content="有得卖线下系统,线下系统以旧换新"/>
+    <meta name="description" content="有得卖线下系统,线下系统以旧换新"/>
+    <link type="text/css" rel="stylesheet" href="/css/common/common.min.css?v=<?php echo v_css;?>"/>
+    <script type="text/javascript" src="/js/jquery-1.8.2.min.js"></script>
+    <script type="text/javascript" src="/js/layer/mobile/layer.mobile.js?v=<?php echo v_js;?>"></script>
+    <script type="text/javascript" src="/js/validator/uiwidget-validator.min.js"></script>
+    <script type="text/javascript" src="/js/validator/validator-custom-methods.js"></script>
+    <script type="text/javascript" src="/js/validator/uiwidget-validator_zh_CN.js"></script>
+    <link rel="stylesheet" href="<?php echo IMG01_DOMAIN; ?>/common/swiper4.5.0/swiper.min.css">
+    <link type="text/css" rel="stylesheet" href="/css/common/new0917/common.min.css?v=<?php echo v_css;?>"/>
+    <link type="text/css" rel="stylesheet" href="/css/promoter/product/index.css?v=190927<?php echo v_css;?>"/>
+    <script type="text/javascript" src="<?php echo IMG01_DOMAIN; ?>/common/jquery-1.11.2.min.js"></script>
+    <script src="<?php echo IMG01_DOMAIN; ?>/common/swiper4.5.0/swiper.min.js" type="text/javascript" charset="utf-8"></script>
+    <link type="text/css" rel="stylesheet" href="/css/common/new0917/common.min.css?v=<?php echo v_css;?>"/>
+    <link rel="stylesheet" href="<?php echo IMG01_DOMAIN; ?>/common/swiper4.5.0/swiper.min.css">
+    <link type="text/css" rel="stylesheet" href="/css/common/new0917/common.min.css?v=<?php echo v_css;?>"/>
+    <link type="text/css" rel="stylesheet" href="/css/promoter/product/index.css?v=190927<?php echo v_css;?>"/>
+    <script type="text/javascript" src="<?php echo IMG01_DOMAIN; ?>/common/jquery-1.11.2.min.js"></script>
+    <script src="<?php echo IMG01_DOMAIN; ?>/common/swiper4.5.0/swiper.min.js" type="text/javascript" charset="utf-8"></script>
+    <link rel="stylesheet" href="<?php echo IMG01_DOMAIN; ?>/common/swiper4.5.0/swiper.min.css">
+    <link type="text/css" rel="stylesheet" href="/css/common/new0917/common.min.css?v=<?php echo v_css;?>"/>
+    <link type="text/css" rel="stylesheet" href="/css/promoter/product/index.css?v=190927<?php echo v_css;?>"/>
+    <script type="text/javascript" src="<?php echo IMG01_DOMAIN; ?>/common/jquery-1.11.2.min.js"></script>
+    <script src="<?php echo IMG01_DOMAIN; ?>/common/swiper4.5.0/swiper.min.js" type="text/javascript" charset="utf-8"></script>
+    <style type="text/css">
+        #guize{
+            float:left;
+
+        }
+        #guizee{
+float: left;
+
+        }
+
+    </style>
+    
+</head>
+
+<body>
+<input type="hidden" id="sslxId" value="<?php echo $this->sslxId;?>">
+<div id="head" class="header">
+    <div id="headerGoBack" class="left"><div class="back"></div></div>
+    <span>商品列表</span>
+    <a href="/offlinem/product/index"><div id="goHomePage" class="right"><div class="goHome"></div></div></a>
+</div>
+<form>
+    <tr>
+    <th>
+        <select id="pinlei" class="pinlei">
+            <option value="">请选择</option>
+            <?php
+            if($this->pinlei){
+                foreach($this->pinlei as $k=>$value){
+                    echo '<option value="'.$k.'">'.$value.'</option>';
+                }
+            }
+            ?>
+        </select>
+    </th>
+        <th>
+        <select id="city" class="city">
+            <option >请选择</option>
+        </select>
+
+        </th>
+        <th>
+        <select id="pinpai" class="pinpai" >
+            <option >请选择</option>
+        </select>
+    </th>
+    </tr>
+</form>
+<div>
+<div id="guize" class="guize"   onclick="queryInfos()" '>
+    </div>
+
+    <div id="guizee" class="guizee">
+    </div>
+
+    </div>
+
+
+<div id="guizee"> </div>
+<div id="autore">
+
+</div>
+
+
+<div id="shanchu" style="margin: auto auto;width: 100px" onclick="seeguize()"><p style="background: #CC0000" >查看规则</p></div>
+<div class="hot_mer_box">
+<div class="hot_mer_list clearfix">
+    <div class="mer_list" id="mer_list"  tabindex="J"   ydm-recycle-hottypes="ydmM02_D_J">手机</div>
+    <div class="mer_list" id="mer_list1"  tabindex="K"  ydm-recycle-hottypes="ydmM02_D_K">平板</div>
+    <div class="mer_list" id="mer_list"  tabindex="A"  ydm-recycle-hottypes="ydmM02_D_A">相机</div>
+    <div class="mer_list" id="mer_list"  tabindex="CPU"  ydm-recycle-hottypes="ydmM02_D_CPU">电脑配件</div>
+    <div class="mer_list" id="mer_list"  tabindex="CD"  ydm-recycle-hottypes="ydmM02_D_CD">智能设备</div>
+</div>
+<div class="hot_box">
+    <div class="hot actived">
+        <ul class="clearfix" id="clearfix">
+
+            <li id="img" ><img class="mer_img" src="https://images.youdemai.com/nwimages/images/thumbs//mobilephone/apple/iphonex/front.jpg" /></li>
+            <li id="tt"><img class="mer_img" src="https://images.youdemai.com/nwimages/images/thumbs//mobilephone/apple/iphonex/front.jpg" /></li>
+            <li id="rr"><img class="mer_img" src="https://images.youdemai.com/nwimages/images/thumbs//mobilephone/apple/iphonex/front.jpg" /></li>
+
+        </ul>
+    </div>
+</div>
+</div>
+<div class="footer" id="footer">
+    <a  href="/offlinem/product/index"> <div class="api_bottom index" apihref="/offlinem/product/index">首页</div></a>
+    <div class="api_bottom classify active" apihref="/offlinem/brands/index">分类</div>
+    <a href="/offlinem/brands/indexw">   <div class="api_bottom center" apihref="/offlinem/brands/indexw">我的</div></a>
+
+</div>
+</body>
+
+<script type="text/javascript" src="/js/view/offlinem/common.min.js?v=<?php echo v_js;?>">
+</script>
+
+<script type="text/javascript">
+
+    $().ready(function() {
+        $(document).on('click', '#pinpai', function (result) {
+            var sslxId = $('#pinpai').val();
+
+
+            $.post('/offlinem/brands/index', {sslxId:sslxId} {
+
+
+            });
+
+
+        });
+
+    });
+
+</script>
+<script type="text/javascript">
+    $().ready(function() {
+        $(document).on('click', '#shanchu', function (result) {
+            var sslxId = $('#pinpai').val();
+            $.post('/offlinem/brands/indes', {sslxId:sslxId}, function (result) {
+                // content:"/system/user/editusers?userId="+userId,
+                window.location.href = '/offlinem/brands/indess?sslxId='+sslxId;
+            });
+
+
+        });
+
+    });
+    </script>
+
+
+
+<script type="text/javascript">
+    $().ready(function() {
+        $(document).on('click','#mer_list',function(data){
+            var tabindex=$(this).attr('tabindex');
+            var tabindexq=$(this).attr('tabindexq');
+            var tabindexw=$(this).attr('tabindexw');
+
+           $.post('/offlinem/brands/tabindexs',{tabindex:tabindex},function (data) {
+for(i in data){
+   $('#img').html(data['0'] );
+    $('#img').append(data['1'] );
+    $('#tt').html(data['2'] );
+    $('#tt').append(data['3'] );
+    $('#rr').html(data['4'] );
+    $('#rr').append(data['5'] );
+}
+
+           });
+
+
+        });
+    });
+
+    $().ready(function() {
+        $(document).on('click','#mer_list1',function(data){
+            var tabindex=$(this).attr('tabindex');
+            var tabindexq=$(this).attr('tabindexq');
+            var tabindexw=$(this).attr('tabindexw');
+
+            $.post('/offlinem/brands/tabindexs',{tabindex:tabindex},function (data) {
+                for(i in data){
+                    $('#img').html(data['0'] );
+                    $('#img').append(data['1'] );
+                    $('#tt').html(data['2'] );
+                    $('#tt').append(data['3'] );
+                    $('#rr').html(data['4'] );
+                    $('#rr').append(data['5'] );
+                }
+
+            });
+
+
+        });
+    });
+</script>
+</html>

@@ -1,0 +1,15 @@
+{"sorts":[
+  {"id":"HOT","typelist":[
+    {"pimg":"/images/offlinem/product/new_list_header01.png","pcode":"HOT","merlist":[
+      {"name":"手机","imgPath":"/images/offlinem/product/new_list_01.png","url":"/offlinem/brand/list?mertype=J"},
+      {"name":"平板","imgPath":"/images/offlinem/product/new_list_02.png","url":"/offlinem/brand/list?mertype=K"},
+      {"name":"笔记本","imgPath":"/images/offlinem/product/new_list_03.png","url":"/offlinem/brand/list?mertype=L"},
+      {"name":"电脑","imgPath":"/images/offlinem/product/new_list_04.png","url":"/offlinem/brand/list?mertype=ZC"}
+    ]},
+    {"pimg":"/images/offlinem/product/new_list_header04.png","pcode":"CPU","merlist":[
+      {"name":"CPU","imgPath":"/images/offlinem/product/new_list_15.png","url":"/offlinem/brand/list?mertype=CPU"},
+      {"name":"固态硬盘","imgPath":"/images/offlinem/product/new_list_16.png","url":"/offlinem/brand/list?mertype=SSD"},
+      {"name":"内存","imgPath":"/images/offlinem/product/new_list_17.png","url":"/offlinem/brand/list?mertype=DDR"}
+    ]}
+  ]}
+]}

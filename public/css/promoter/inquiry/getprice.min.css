@@ -1,0 +1,78 @@
+@CHARSET "UTF-8";
+.quoteinfo{padding:.3rem 0;color:#fff;text-align:center;background:#f55669;margin-bottom:.2rem;}
+.quoteinfo .mername{font-size:.3rem;line-height:.3rem;padding:.3rem;}
+.quoteinfo .text{font-size:.24rem;}
+.quoteinfo .pricebox{font-size:.3rem;font-weight:bold;}
+.quoteinfo .pricebox .price{font-size:.54rem;}
+
+.couponsArea {padding:.5rem .2rem;background:#ffffff}
+.couponsArea .title{font-size:.3rem;color:#333;line-height:.3rem;}
+.couponsArea .desc{font-size:.2rem;color:#999999;padding-top:.1rem;}
+
+.couponsArea .couponName{font-size:.24rem;color:#444;font-weight:bold;}
+.couponsArea .couponDesc{font-size:.24rem;color:#f55669;}
+
+.fl {float:left;}
+.coupon-info .coupon-icon {text-align:center;width:30%;min-width:120px;}
+.coupon-info .coupon-icon .coupon-top{height:30px;line-height:30px;font-size:14px;background:url("/images/m/bg_img/coupon-top.png");color:#666;}
+.coupon-info .coupon-icon .coupon-body{height:1.2rem;line-height:1.2rem;font-size:.5rem;color:#fff;background:#DB384C;}
+.coupon-info .coupon-icon .coupon-bottom{background:url("/images/m/bg_img/coupon-bottom.png") bottom;height:10px;}
+.coupon-info .coupon-detail{width:50%;margin-left:10px;}
+.coupon-info .coupon-detail .title{font-size:.32rem;height:.4rem;color:#333;line-height:.4rem;}
+.coupon-info .coupon-detail .desc{height:1.2rem;font-size:.22rem;color:#999;line-height:.4rem;}
+.coupon-area:AFTER {content:' ';visibility:hidden;display:block;clear:both;}
+.coupon-area .coupon-info:after {content:' ';visibility:hidden;display:block;clear:both;height:0;}
+.coupon-area .selected {border:2px solid #db384c;}
+.coupon-area .selected span{position:absolute;width:30px;height:30px;background:url(/images/m/bg_img/select-icon.png) no-repeat;bottom:0;right:0;}
+.district-area{line-height:.4rem;font-size:.32rem;background-color:#fff;margin-top:.2rem;}
+.district-area .title{padding:.3rem .2rem .3rem 50px;background:url(/images/m/bg_img/addr-icon.png) no-repeat left;}
+.district-area .addr{height:50px;line-height:50px;padding-right:20px;width:60%;text-align:right;position:relative;}
+.district-area .addrText{display:inline-table;margin-right:20px;float:right;text-align:right;color:#999;padding-right:20px;background:url(/images/m/arrow1.png) no-repeat right;}
+.district-area .addr span {position:absolute;width:12px;height:20px;background:url(/images/m/arrow1.png) no-repeat;bottom:15px;right:0;}
+.menu-sidebar{position:fixed;top:0;left:0;width:80%;height:100%;overflow:hidden;z-index:9999;background:#fff;
+-webkit-transform:translate3d(2000px,0,0);-moz-transform:translate3d(2000px,0,0);-ms-transform:translate3d(2000px,0,0);
+-o-tranform:translate3d(2000px,0,0);transform:translate3d(2000px,0,0);-webkit-transition:all .5s ease-out;-moz-transition:all .5s ease-out;
+}
+.sidebar-content .sidebar-header{position:relative;height:60px;background:#F8F8F8;line-height:60px;border-bottom:1px solid #DCDCDC;}
+.sidebar-content .sidebar-header .title{font-size:16px;text-align:center;}
+.sidebar-content .sidebar-header .back{position:absolute;top:20px;left:20px;display:inline-block;width:15px;height:15px;border:solid #5D5D5D;border-width:1px 0 0 1px;
+-webkit-transform:rotate(-45deg);-moz-transform:rotate(-45deg);-ms-transform:rotate(-45deg);transform:rotate(-45deg);}
+.sidebar-list li .title{height:30px;line-height:30px;font-size:16px;color:#252525;}
+.sidebar-items-container {position:relative;width:100%;background:#fff;}
+.sidebar-wrapper{overflow:none;
+-webkit-transform:translate(0px, 0px);-moz-transform:translate(0px, 0px);-transform:translate(0px, 0px);
+-webkit-transition-property:transform;-moz-transition-property:transform;-transition-property:transform;
+-webkit-transition-duration:300ms;-moz-transition-duration:300ms;-transition-duration:300ms;
+}
+.area-wrapper{width:100%;}
+.area-wrapper .area-list{display:none;}
+.sidebar-wrapper .sidebar-list{background:#fff;overflow-y:auto;}
+.sidebar-wrapper .sidebar-list>li{padding:.1rem .1rem .1rem .2rem;border-bottom:1px solid #bfbfbf;}
+.sidebar-wrapper .sidebar-list li.checked{background:#FFCCCC url("/images/default/check2.png") center right no-repeat;}
+.tab-nav {background:#fff;line-height:50px;box-shadow:0 -1px 0 #DCDCDC inset;}
+.tab-nav li {height:50px;line-height:50px;width:33.3%;font-size:14px;text-align:center;float:left;}
+.tab-nav li.current {border-bottom:2px solid #FF0000;color:#FF0000;font-size:14px;}
+.slide-mask{position:fixed;z-index:8;left:0;top:0;bottom:0;width:100%;height:100%;background:rgba(0, 0, 0, 0.4);-webkit-transition:all 0.3s ease-out;transition:all 0.3s ease-out;display:none;transform-origin:0px 0px 0px;opacity:1;transform:scale(1, 1);}
+
+.recycProcess .rptitle{font-size:.3rem;padding:.15rem .2rem;color:#333;text-align:left;}
+.recycProcess .rpbody{padding:.3rem .2rem;background:#fff;position:relative}
+.recycProcess .rpbody .btn{width:1.68rem;border:1px solid #d2d2d2;font-size:.24rem;color:#333;height:.74rem;line-height:.6rem;padding:.05rem .1rem;border-radius:5px;margin:0 auto;text-align:center;}
+.recycProcess .rpbody .btn2{line-height:.3rem;}
+.recycProcess .rpbody .arrow{position:relative;width:.3rem;height:.74rem;}
+.recycProcess .rpbody .arrow .aw{position:absolute;left:.1rem;top:.3rem;width:.15rem;height:.15rem;-webkit-transform:rotate(45deg);-ms-transform:rotate(45deg);transform:rotate(45deg);}
+.recycProcess .rpbody .arrow .aw.awleft{border-left:2px solid #AEAEAE;border-bottom:2px solid #AEAEAE;}
+.recycProcess .rpbody .arrow .aw.awright{border-right:2px solid #AEAEAE;border-top:2px solid #AEAEAE;}
+.recycProcess .rpbody .arrow.down{height:.5rem;}
+.recycProcess .rpbody .arrow.down .aw.awdown{border-right:2px solid #AEAEAE;border-bottom:2px solid #AEAEAE;top:.1rem;left:.8rem;}
+
+.clausebox{padding:.3rem;}
+.clausebox .recycle{margin:0 auto;font-size:.24rem;}
+.clausebox .recycle img{width:.3rem;padding-right:.1rem;vertical-align:bottom;}
+.clausebox .recycle span{font-size:.24rem;color:#333;}
+.clausebox .recycle .clauseText{color:#007AFF;}
+
+.btnArea{padding:.1rem .24rem;background:#F9F9F9;border-top:1px solid #d2d2d2;}
+.btnArea .btn-submit{border-radius:.05rem;text-align:center;font-size:.32rem;padding:.1rem .2rem;background:#d10107;color:#fff;line-height:.5rem;border:1px solid #d10107;}
+.btnArea .btn-submit.disabled{background:#999;}
+.androidFlag{padding-bottom:1rem;}
+.androidFlag .btnArea{position:fixed;bottom:-1px;z-index:9999;width:100%;left:0;min-width:320px;}

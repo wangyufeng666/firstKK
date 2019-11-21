@@ -1,0 +1,8 @@
+1、微信配置文件修改
+weixin/mp.WxConfig.php
+
+2、入口文件修改
+index.php
+
+3、数据源修改
+configs/application.ini

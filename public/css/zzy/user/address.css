@@ -1,0 +1,39 @@
+ .address_container{background: #fff;margin-top: 0.2rem;}
+ .address_container .header_text{font-size: 0.25rem;padding: 0.2rem;font-weight: bold;border-bottom: 1px solid #F5F5F5;}
+ .address_box{padding: 0.25rem 0.15rem;border-bottom: 1px solid #ddd;}
+ .address_box .address span{font-size: 0.23rem;color: #666;}
+ .address_box .address .name{margin-right: 0.3rem;}
+ .address_box .address .zy_address{margin: 0.25rem 0 0.1rem 0;font-size: 0.23rem;color: #999;}
+ .address_box{padding-left: 0.7rem;background: url(/images/zzy/img/address_renk_02.png)no-repeat 0.2rem center;background-size: 0.3rem;}
+ .address_box.selected{background: url(/images/zzy/img/address_renk_01.png)no-repeat 0.2rem center;background-size: 0.3rem;}
+ .add_address{height: 0.8rem;line-height: 0.8rem;text-align: center;width: 90%;margin: 0.2rem auto;background: url(/images/zzy/img/add_address_bg.png)no-repeat;background-size: 100%;color: #fff;border-radius: 0.1rem;font-size: 0.3rem;}
+
+.plusaddress_container{padding: 0.1rem 0rem;}
+.plusaddress_container div{border-bottom: 1px solid #F5F5F5;padding: 0.4rem 0.2rem;}
+.plusaddress_container div span{display: inline-block;font-size: 0.25rem;color: #666;margin-right: 0.1rem;}
+.plusaddress_container div input{padding: 0.1rem;font-size: 0.22rem;/*border-bottom: 1px solid #F5F5F5;*/}
+.plusaddress_container .go_select{float: right;display: inline-block;width: 4.2rem;text-align: right;padding:0 0.3rem 0 0 ;background: url(/images/zzy/img/city_right.png)no-repeat right center;background-size: 0.1rem;}
+.plusaddress_container .addrDetail{height: 0.7rem;width: 100%;line-height: 0.35rem;word-break:break-all;font-size: 0.22rem;}
+
+.btm_submit{width: 90%;margin: 0 auto;margin-top: 0.5rem;height: 0.9rem;line-height: 0.9rem;text-align: center;background: url(/images/zzy/img/add_address_bg.png)no-repeat center center;background-size: 100%;color: #fff;font-size: 0.3rem;border-radius: 0.1rem;}
+
+.this_button {border-radius:5px;background:#EF8080 url("/images/default/bluebutton.png") repeat-x;color:white;padding:.2rem;text-align:center;font-size:.26rem;}
+.sidebar-content .sidebar-header{position:relative;height:.88rem;background:#FFFFFF;line-height:.88rem;border-bottom:1px solid #DCDCDC;}
+.sidebar-content .sidebar-header .title{font-size:.28rem;text-align:center;}
+.sidebar-content .sidebar-header .back{position:absolute;top:.3rem;right:.3rem;display:inline-block;width:.3rem;height:.3rem;background:url(/images/zzy/img/cls_btn.png) no-repeat;background-size:.3rem;}
+.menu-sidebar{position:fixed;bottom:0;left:0;width:80%;height:100%;overflow:hidden;z-index:9999;background:#fff;-webkit-transform:translate(0,2000px);-moz-transform:translate(0,2000px);-ms-transform:translate(0,2000px);-o-tranform:translate(0,2000px);transform:translate(0,2000px);-webkit-transition:all .5s ease-out;-moz-transition:all .5s ease-out;}
+.sidebar-list li .title{height:.5rem;line-height:.5rem;font-size:.24rem;color:#252525;}
+.sidebar-items-container {position:relative;width:100%;background:#fff;}
+.sidebar-wrapper{-webkit-transform:translate(0px, 0px);-webkit-transition-property:transform;-webkit-transition-duration:300ms;-transform:translate(0px, 0px);-moz-transform:translate(0px, 0px);-moz-transition-property:transform;-moz-transition-duration:300ms;overflow:none;-transition-property:transform;-transition-duration:300ms;}
+.sidebar-list li.checked .title{color:#EF3030;}
+.area-wrapper{width:100%;}
+.subway-wrapper{width:100%;}
+.sidebar-wrapper .sidebar-list{background:#fff;overflow-y:auto;}
+.sidebar-wrapper .sidebar-list>li{padding:.15rem .1rem .15rem .2rem;border-bottom:1px solid #E6E6E6;}
+.area-list{display:none;}
+.subway-list{display:none;}
+.tab-nav {background:#fff;line-height:.7rem;box-shadow:0 -1px 0 #DCDCDC inset;width:100%;}
+.tab-nav li {height:.7rem;line-height:.7rem;width:33%;font-size:.26rem;text-align:center;float:left;}
+.tab-nav li.current {border-bottom:2px solid #FF0000;color:#FF0000;font-size:.26rem;}
+.subway-nav li, .sfappoint-nav li{width:50%;}
+.slide-mask{position: fixed;z-index: 8;left: 0;top: 0;bottom: 0;width: 100%;height: 100%; background: rgba(0, 0, 0, 0.4);-webkit-transition: all 0.3s ease-out;transition: all 0.3s ease-out;display: none;transform-origin: 0px 0px 0px;opacity: 1; transform: scale(1, 1);}

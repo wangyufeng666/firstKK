@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <link type="text/css" rel="stylesheet" href="/css/common/common.min.css?v=<?php echo v_css;?>"/>
+      <script type="text/javascript" src="<?php echo IMG01_DOMAIN; ?>/common/jquery-1.8.2.min.js"></script>
+      <script type="text/javascript" src="/js/jquery-1.8.2.min.js"></script>
+      <style type="text/css">
+          .ydm_logo_container{text-align: center;padding: 0.5rem 0rem;}
+          .ydm_logo_container img{width: 20%;}
+          .ydm_logo_container .text{font-size: 0.22rem;font-weight: bold;padding: 0.3rem 0;font-family: "PingFang SC", "Helvetica Neue", Helvetica;}
+          .mainbox{padding:.5rem 0;}
+          .mainbox .btnbox{width: 80%;margin: 0 auto;line-height:1.0rem;font-size:.35rem;text-align:center;margin-bottom: 0.5rem;border-radius:.07rem;color:#fff;background: #ff1744;}
+          .mainbox .regist{text-align:right;padding-right:.5rem;font-size:.24rem;font-weight: bold;}
+          .mainbox .regist a{color:#EF3030;}
+      </style>
+</head>
+<body>
+
+    <div class="mainbox">
+        <div class="btnbox">    <input placeholder="姓名" id="names" name="names" value="王禹枫" style="height: 50px;width: 200px"></input></div>
+            <div class="btnbox"> <input placeholder="请输入密码" id="password" name="password" value="123456"  style="height: 50px;width: 200px"></input></div>
+        <div class="btnbox" id="btn_submit"  onclick="submitting()">登录</div>
+    </div>
+
+
+
+
+</body>
+<script type="text/javascript" src="/js/view/offlinem/common.min.js?v=<?php echo v_js;?>"></script>
+  <script type="text/javascript">
+function submitting() {
+    $('#btn_submit').click(function (result) {
+        var names = $('#names').val();
+        var password = $('#password').val();
+
+        $.post('/offlinem/brands/indexc', {names: names, password: password}, function (result) {
+            if (result == 'Y') {
+                window.location.href = '/offlinem/brands/indexw?names=' + names;
+            }
+
+            else {
+
+                alert('密码或登录名错误');
+            }
+
+        });
+
+    });
+
+}
+
+
+      </script>
+</html>

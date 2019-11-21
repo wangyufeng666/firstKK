@@ -1,0 +1,63 @@
+UL.tabs {
+	BORDER-BOTTOM: #666 1px solid; PADDING-BOTTOM: 0px; LIST-STYLE-TYPE: none; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; HEIGHT: 30px; PADDING-TOP: 0px
+}
+UL.tabs LI {
+	PADDING-BOTTOM: 0px; TEXT-INDENT: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; FLOAT: left; LIST-STYLE-IMAGE: none !important; PADDING-TOP: 0px
+}
+UL.tabs A {
+	POSITION: relative; TEXT-ALIGN: center; PADDING-BOTTOM: 0px; LINE-HEIGHT: 30px; MARGIN: 0px; PADDING-LEFT: 0px; WIDTH: 111px; PADDING-RIGHT: 0px; DISPLAY: block; BACKGROUND: url(/images/tabs.png) no-repeat -652px 0px; HEIGHT: 30px; COLOR: #000; FONT-SIZE: 11px; TOP: 1px; TEXT-DECORATION: none; PADDING-TOP: 0px
+}
+UL.tabs A:active {
+	OUTLINE-STYLE: none
+}
+UL.tabs A:hover {
+	BACKGROUND-POSITION: -652px -31px; COLOR: #fff
+}
+UL.tabs A.current {
+	BACKGROUND-POSITION: -652px -62px; COLOR: #000 !important; CURSOR: default !important
+}
+UL.tabs A.current:hover {
+	BACKGROUND-POSITION: -652px -62px; COLOR: #000 !important; CURSOR: default !important
+}
+UL.tabs LI.current A {
+	BACKGROUND-POSITION: -652px -62px; COLOR: #000 !important; CURSOR: default !important
+}
+UL.tabs A.w1 {
+	WIDTH: 134px; BACKGROUND-POSITION: -519px 0px
+}
+UL.tabs A.w1:hover {
+	BACKGROUND-POSITION: -519px -31px
+}
+UL.tabs A.current.w1 {
+	BACKGROUND-POSITION: -519px -62px
+}
+UL.tabs A.w2 {
+	WIDTH: 154px; BACKGROUND-POSITION: -366px 0px
+}
+UL.tabs A.w2:hover {
+	BACKGROUND-POSITION: -366px -31px
+}
+UL.tabs A.current.w2 {
+	BACKGROUND-POSITION: -366px -62px
+}
+UL.tabs A.w3 {
+	WIDTH: 174px; BACKGROUND-POSITION: -193px 0px
+}
+UL.tabs A.w3:hover {
+	BACKGROUND-POSITION: -193px -31px
+}
+UL.tabs A.current.w3 {
+	BACKGROUND-POSITION: -193px -62px
+}
+UL.tabs A.w4 {
+	WIDTH: 194px; BACKGROUND-POSITION: 0px 0px
+}
+UL.tabs A.w4:hover {
+	BACKGROUND-POSITION: 0px -31px
+}
+UL.tabs A.current.w4 {
+	BACKGROUND-POSITION: 0px -62px
+}
+DIV.panes DIV.pane {
+	DISPLAY: none
+}

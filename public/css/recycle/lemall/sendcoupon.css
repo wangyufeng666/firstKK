@@ -1,0 +1,31 @@
+@CHARSET "UTF-8";
+.merinfo th{text-align:right;width:80px;}
+.merinfo td{width:25%;}
+.merinfo tr{height:28px;}
+.orderinfo, .redline{border-top:1px dashed red;margin-top:20px;}
+.orderinfo .detail{width:600px;vertical-align:top;}
+.orderinfo .detail tr{height:30px;}
+.orderinfo .detail th{width:80px;text-align:right;}
+.couponArea{width:900px;padding-left:40px;}
+.couponArea .couponLeft{width:600px;float:left;}
+.couponArea .couponRight{width:290px;float:left;}
+.quoteBox{padding:20px 0}
+.quoteBox .quote .merName{font-size:16px;font-weight:bold;color:#000;}
+.quoteBox .quote .priceDiv{border:1px solid red;padding:8px 10px;color:#E0524B;width:200px;}
+.quoteBox .quote {font-size:20px;text-align:left;font-weight:normal;}
+.quoteBox .quote .price{font-size:30px;color:#E0524B;}
+.price-wrap {margin-top:14px;overflow:hidden;}
+.price-wrap .pre-price, .price-wrap .sub-price{float:left;padding:10px;text-align:center;width:140px;}
+.price-wrap div h5 {color:red;font-size:16px;margin:0;line-height:40px;}
+.price-wrap .desc {color:#999999;font-size:12px;margin-top:10px}
+.price-wrap .pre-price {background-color:#eeeeee;border:1px solid #dfdfdf;}
+.price-wrap .sub-price {position:relative;background:#f7f7f7;border:solid #dfdfdf;border-width:1px 1px 1px 0px;}
+.price-wrap .sub-price i {position:absolute;display:inline-block;height:25px;line-height:25px;width:25px;border-radius:50%;top:50%;left:-12px;margin-top:-12px;background:#f7f7f7;font-style:normal;}
+.coupons{width:620px;}
+.coupons .coupon{padding:20px;float:left;text-align:center;border:1px solid #dfdfdf;margin:10px;cursor:pointer;width:140px;}
+.coupons .coupon:hover{border:1px solid red;}
+.coupons .coupon.disabled{background:#dfdfdf;border:1px solid #dfdfdf;cursor:not-allowed;}
+.coupons .coupon.checked{border:1px solid #ff2222;background:url(/images/bg_img/selected.png) no-repeat right bottom;background-size:16px 16px;}
+.coupons .coupon .price{font-size:20px;color:#FF5151;padding-bottom:10px;font-weight:bold;}
+.coupons .coupon .name{color:#5A5A5A;}
+.coupons .coupon .surplus{color:#408600;font-size:12px;font-weight:normal;}

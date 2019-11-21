@@ -1,0 +1,108 @@
+@CHARSET "UTF-8";
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,form,fieldset,input,textarea,p,th,td{
+  margin:0;padding:0;outline:0;outline:0;font-weight:inherit;font-size:.2rem;
+}
+a{text-decoration:none;-webkit-touch-callout:none;border:0px;color:#333;}
+em,i{font-style:normal;}
+
+*{margin:0;padding:0;border:0;outline:0;font:inherit;-webkit-tap-highlight-color:rgba(0,0,0,0);tap-highlight-highlight-rgba(0,0,0,0);}
+html,body,form,fieldset,p,div,h1,h2,h3,h4,h5,h6{-webkit-text-size-adjust:none;-ms-text-size-adjust:none;text-size-adjust:none;}
+
+body{margin:0 auto;min-width:320px;max-width:640px;font-family:PingFang SC,Microsoft YaHei,Hiragino Sans GB W3,Helvetica,Heiti SC,Droid Sans,Droidsansfallback,sans-serif;;color:#333;font-size:1.2rem;background:#fff;}
+div, ul, li{-moz-box-sizing:border-box;-webkit-box-sizing:border-box;-o-box-sizing:border-box;-ms-box-sizing:border-box;box-sizing:border-box;}
+table{border-collapse:collapse;border-spacing:0;}
+ol,ul,li{list-style:none;}
+img{vertical-align:top;border:none;}
+
+.clearfix:after{content:" ";display:block;height:0;clear:both;visibility:hidden;}
+.clearfix{display:block;}
+* html .clearfix {height:1%;}
+
+/*解决禁止文字长按复制*/
+*{-webkit-user-select: none;  /* Chrome all / Safari all /opera15+*/  
+    -moz-user-select: none;     /* Firefox all */  
+    -ms-user-select: none;      /* IE 10+ */  
+    user-select: none;  
+}
+::-webkit-scrollbar{display: none;}
+
+.ydm_header{position: fixed;top: 0px;left: 0;width: 100%;max-width: 750px;height: 44px;line-height: 44px;background: #fff;text-align: center;color: #333;border-bottom:1px solid #f5f5f5;font-size: 0.36rem;z-index: 8;}
+.ydm_header .backpage{position: absolute;top: 0px;left: 0px;height: 44px;width: 44px;background: url(https://img01.youdemai.com/images/ydmapp/common/icon/new_header_left.png)no-repeat center center;background-size: 25%;z-index: 8;}
+.ydm_header .header_right{position: absolute;top: 35px;right: 0;width: 44px;height: 44px;line-height: 44px;padding: 0 0.2rem;text-align: center;font-size: 1.1rem;vertical-align: middle;}
+.ydm_header .header_right img{width: 60%;}
+.apicloud_main{padding-top: 80px;max-width: 750px;}
+.maxwidth{max-width: 750px;}
+.left{float: left;}
+.right{float: right;}
+.hide{display: none;}
+.img img{width: 100%;}
+.themcolor{color: #d85a57;}
+.thembg{color: #fff;background: -webkit-linear-gradient(left top, #F79F6C , #F77374,#F1645A);background: -o-linear-gradient(bottom right, #F79F6C , #F77374,#F1645A);background: -moz-linear-gradient(bottom right, #F79F6C , #F77374,#F1645A);background: linear-gradient(to bottom right, #F79F6C , #F77374,#F1645A);}
+
+img{display: block;vertical-align: middle;margin: 0 auto;}
+.ellipsis{overflow:hidden;white-space:nowrap;text-overflow:ellipsis;}
+input,textarea{width: 100%;height: 40px;padding: 10px 15px;-webkit-user-select: text;font-size: 0.3rem;border: 0;border-radius: 3px;outline: 0;background-color: #fff;-webkit-appearance: none;box-sizing: border-box;}
+textarea{resize:none}
+input:focus,textarea:focus{border: 0;outline-color: #fff;}
+div{box-sizing: border-box;outline-color:#fff;outline:0;}
+
+::-webkit-input-placeholder{font-family: "Microsoft YaHei";color:#bbb !important;}
+::-moz-placeholder{font-family: "Microsoft YaHei";color:#bbb !important;}
+:-moz-placeholder{font-family: "Microsoft YaHei";color:#bbb !important;}
+:-ms-input-placeholder{font-family: "Microsoft YaHei";color:#bbb !important;}
+
+.ydm_container_box{padding-top: 44px;}
+
+/*弹窗*/
+.pop_slide{position: fixed;top: 0;left: 0;height: 100%;width: 100%;background: rgba(0,0,0,0.5);z-index: 10 !important;}
+.popup_box{position: fixed;width: 80%;left: 10%;top: 27%;padding-top: 0.94rem;background: #fff;border-radius: 0.2rem;-webkit-transition: all .3s;transition:all .3s;z-index: 11;}
+.popup_box.showpop{transform: scale(0);}
+.popup_box .text{font-size: 0.3rem;text-align: center;/*line-height: 2.5rem;*/padding: 0rem 0.5rem 0.98rem;}
+.popup_box .pop_btm{border-top: 1px solid #F5F5F5;}
+.popup_box .pop_btm .yes{width: 50%;line-height: 1.0rem;color: #D85A57;text-align: center;font-size: 0.32rem;}
+.popup_box .pop_btm .no{width: 50%;line-height: 1.0rem;color: #999;text-align: center;font-size: 0.32rem;border-right: 1px solid #F5F5F5;}
+.popup_box .line_btm .yes{width: 100%;line-height: 1.0rem;background: #d85a57;color: #fff;text-align: center;border-radius: 0 0 0.2rem 0.2rem;font-size: 0.32rem;}
+.popup_box .popimgbox{background: #fff;border-radius: 0.2rem 0.2rem 0 0;}
+.popup_box .popimgbox img{border-radius: 0.2rem 0.2rem 0 0;}
+.popup_box .popimgbox.popredius img{border-radius: 0.2rem;}
+.popup_box .closepopimg{position: fixed;top: 22.5%;right: 10%;width: 10%}
+.popup_box .abs_text{background: #fff;padding: 0.35rem 0.3rem;font-size: 0.32rem;border-radius: 0 0 0.2rem 0.2rem;}
+
+/*toast弹窗*/
+.mess{text-align:center;}
+.mess span{display: inline-block;padding: 0.1rem 0.3rem;background: rgba(0,0,0,.5);color: #fff;border-radius: 2px;}
+
+/*验证码弹窗*/
+.popup_box .semcodebox .code_tips{text-align: center;font-size: 0.3rem;padding-bottom: 0.3rem;}
+.popup_box .semcodebox .sem_code{position: relative;padding-bottom: 0.44rem;}
+.popup_box .semcodebox .sem_code .input{width: 92%;margin: 0 auto;border: 1px solid #ddd;padding: 0.3rem 0.2rem;}
+.popup_box .semcodebox .sem_code .input input{height: 0.3rem;line-height: 0.3rem;text-align: left;}
+.popup_box .semcodebox .sem_code  .in_code{position: absolute;top: 0.2rem;right: 0.5rem;background: #333;color: #fff;padding: 0.12rem 0.5rem;border-radius: 0.4rem;font-size: 0.28rem;}
+.popup_box .semcodebox .code_btm{width: 92%;margin: 0 auto;padding-bottom: 0.16rem;}
+.popup_box .semcodebox .code_btm div{font-size: 0.32rem;width: 42%;text-align: center;padding: 0.27rem 0;border-radius: 0.1rem;}
+.popup_box .semcodebox .code_btm .left{background: #ddd;color: #999;}
+.popup_box .semcodebox .code_btm .right{background: #D85A57;color: #fff;}
+/*异常状态图片显示*/
+.unusual_box{position: fixed;top: 0;left: 0;height: 100%;width: 100%;margin: 3.0rem auto 0;padding: 0 35%;}
+.unusual_box .unus_text{text-align: center;margin-top: 0.5rem;color: #666;}
+
+/*微信分享*/
+.share_box{position: fixed;bottom: 2%;left: 2.5%;width: 95%;height: 2.0rem;color:#436EEE;border-radius: 0.2rem;background:#fff;-webkit-transition: all .3s;transition:all .3s;transform: translateY(132%);-webkit-transform: translateY(132%);z-index: 20;}
+.share_box.inner{transform: translateY(0%);-webkit-transform: translateY(0%);}
+.share_box .wxshare .wx_list{text-align: center;line-height: 1.0rem;font-size: 0.32rem;}
+.share_box .wxshare .wx_list:last-child{border-top: 1px solid #F5F5F5;}
+
+/*底部按钮*/
+#footer{display: -webkit-flex;display: flex;position: fixed;bottom: 0;width: 100%;background-color: #fff;border-top:1px solid #f5f5f5;z-index: 11;}
+#footer .api_bottom{-webkit-flex: 1;-ms-flex: 1;flex: 1;padding: 0.7rem 0 0.09rem 0;text-align: center;font-size: 0.2rem;text-align: center;color: #999;}
+#footer .api_bottom.active{color: #333;}
+
+#footer .api_bottom.index{background: url(http://img01.youdemai.com/images/ydmapp/common/footer/index.png)no-repeat center 0.16rem;background-size: auto 0.47rem;}
+#footer .api_bottom.actity{background: url(http://img01.youdemai.com/images/ydmapp/common/footer/activity.png)no-repeat center 0.14rem;background-size: auto 0.41rem;}
+#footer .api_bottom.classify{background: url(http://img01.youdemai.com/images/ydmapp/common/footer/classify.png)no-repeat center 0.14rem;background-size: auto 0.41rem;}
+#footer .api_bottom.center{background: url(http://img01.youdemai.com/images/ydmapp/common/footer/user.png)no-repeat center 0.17rem;background-size: auto 0.38rem;}
+
+#footer .api_bottom.index.active{background: url(http://img01.youdemai.com/images/ydmapp/common/footer/index_on.png)no-repeat center 0.16rem;background-size: auto 0.47rem;}
+#footer .api_bottom.actity.active{background: url(http://img01.youdemai.com/images/ydmapp/common/footer/activity_on.png)no-repeat center 0.14rem;background-size: auto 0.41rem;}
+#footer .api_bottom.classify.active{background: url(http://img01.youdemai.com/images/ydmapp/common/footer/classify_on.png)no-repeat center 0.14rem;background-size: auto 0.41rem;}
+#footer .api_bottom.center.active{background: url(http://img01.youdemai.com/images/ydmapp/common/footer/user_on.png)no-repeat center 0.17rem;background-size: auto 0.38rem;}

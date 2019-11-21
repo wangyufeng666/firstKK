@@ -1,0 +1,80 @@
+@charset "UTF-8";
+
+.recyc{min-height:300px;}
+.recyc .center{width:1200px;margin-left:auto;margin-right:auto;}
+.recyc .mainimg{padding:20px 0;}
+.recyc .mainimg img{width:1200px;}
+.subHeader{padding:20px 0;}
+.subHeader .title{font-weight:normal;font-size:14px;color:#000;background:url(../images/recycle/point.png) no-repeat left;
+padding-left:20px;-moz-background-size:10px 10px;-webkit-background-size:10px 10px;-o-background-size:10px 10px;background-size:10px 10px;}
+.subHeader .title b{font-size:16px;}
+
+.flows{padding-bottom:20px;}
+.flows ul, .hotBrands ul{list-style-position:outside;list-style-type:none;}
+.flows .items{padding:30px;margin:0 auto;width:960px;}
+.flows .items .item{float:left;margin:10px 0;text-align:center;width:120px;}
+.flows .items .arrow{float:left;background:url("../images/recycle/flow-arrow.png") no-repeat;width:80px;height:20px;margin-top:40px;}
+.flows .items .item .num{font-size:18px;font-style:italic;font-weight:bold;color:#c80000;padding:10px 0;}
+.flows .items .item .text{font-size:14px;padding:10px 5px;}
+
+.subBanner{padding:30px 0;background:#efefef;}
+.subBanner .banner1{width:1200px;height:100px;background:url("../images/recycle/subbanner.png") no-repeat;}
+.subBanner .banner1 .text{font-weight:normal;color:#000;padding:20px 10px 0px 10px;float:left;}
+.subBanner .banner1 .text .text1{font-size:30px;}
+.subBanner .banner1 .text .text2{font-size:16px;padding-left:20px;}
+.subBanner .banner1 .text .text2 a:hover{color:#c80000;}
+
+.subBanner .banner2{float:right;font-size:16px;color:#fff;padding-top:50px;}
+.subBanner .banner2 .server{font-size:14px;}
+.subBanner .banner2 .go{padding:6px 30px;background:#fff;color:#c80000;margin:20px;cursor:pointer;position:relative;font-size:18px;border-radius:3px;}
+.subBanner .banner2 .go:hover{}
+.subBanner .banner2 .go i{position:absolute;width:10px;height:10px;top:14px;right:10px;background:url("../images/recycle/go.png") no-repeat;background-size:10px 10px;}
+
+.hots{background:#efefef;padding-bottom:20px;}
+.hots .hotBrands{margin-bottom:20px;}
+.hots .hotBrands .brands{padding:10px 20px;background:#ffffff;}
+.hots .hotBrands .brands .brand{float:left;padding:0 30px;}
+
+.hots .hotMers{margin:0 auto;padding:0;}
+.hots .hotMers .items{margin-left:-15px;}
+.hots .hotMers .items .item{float:left;width:206px;background:#fff;overflow:hidden;margin:0 0 15px 15px;padding:10px;text-align:center;height:240px;border:1px solid #fff;}
+.hots .hotMers .items .item:hover{border:1px solid red;}
+.hots .hotMers .items .item .img{vertical-align:middle;overflow:hidden;}
+.hots .hotMers .items .item .img img{width:160px;height:160px;}
+.hots .hotMers .items .item .merName{height:50px;line-height:25px;word-wrap:break-word;overflow:hidden;padding:6px;font-size:14px;color:#323333;}
+.hots .hotMers .items .item .counts{}
+.hots .hotMers .items .item .btn{text-align:right;font-size:14px;border-radius:20px;}
+
+.recyc .center .partner{text-align:center;padding:40px 0 20px 0;}
+.recyc .center .partner .server{padding:40px 0 20px 0;}
+.recyc .center .partner .server hr{border:1px solid #efefef;margin:0;}
+.recyc .center .partner .server .text{background:#fff;width:300px;margin:0 auto;margin-top:-15px;font-size:20px;}
+.recyc .center .partner .desc{font-size:16px;background:#EAEAEA;padding:6px;width:900px;margin:0 auto;border-radius:20px;line-height:20px;}
+
+.recyc .servers{padding-bottom:20px;}
+.recyc .servers ul, .hotBrands ul{list-style-position:outside;list-style-type:none;}
+.recyc .servers .items{padding:30px;margin:0 auto;width:880px;}
+.recyc .servers .items .item{float:left;margin:10px;text-align:center;width:200px;}
+.recyc .servers .items .item .text{font-size:14px;padding:10px 5px;}
+
+.recyc .recycle{padding:20px 0;text-align:center;}
+.recyc .recycle .center hr{border:1px solid #EFEFEF;}
+.recyc .recycle .box{width:440px;margin:0 auto;margin-top:-20px;background:#fff;}
+.recyc .recycle .text{font-size:20px;float:left;padding-left:20px;line-height:38px;}
+
+.recyc .recycle .btn{width:120px;padding:5px 20px;background:#c80000;color:#fff;font-size:18px;margin:0 auto;margin-left:20px;border-radius:4px;border:1px solid #c80000;position:relative;float:left;}
+.recyc .recycle .btn:hover{border:1px solid #FF6464;cursor:pointer;}
+.recyc .recycle .btn i{position:absolute;width:10px;height:10px;top:13px;right:15px;background:url("../images/recycle/go1.png") no-repeat;background-size:10px 10px;}
+
+.qa_help{padding-top:0;}
+.qa_help b{font-size:16px;color:black;}
+.qa_help ul{margin-left:40px;margin:0 50px 50px 50px;}
+.qa_help li{padding:0;margin:0;}
+.qa_help li dl{}
+.qa_help li dl dt{color:#222222;font-size:16px;padding:25px 10px 5px 10px;line-height:25px;}
+.qa_help li dl dd{font-size:14px;padding-left:12px;line-height:25px;}
+.qa_help li dl dt i{font-size:16px;font-weight:bold;font-style:normal;}
+.qa_help li dl dd i{font-size:16px;font-weight:bold;font-style:normal;}
+.qa_help li dl dd span{padding-left:28px;}
+
+

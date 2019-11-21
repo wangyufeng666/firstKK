@@ -1,0 +1,193 @@
+.merinfo th {
+    text-align: right;
+    width: 80px;
+}
+
+.merinfo td {
+    width: 25%;
+}
+
+.merinfo tr {
+    height: 25px;
+}
+
+.orderinfo {
+    width: 100%;
+    border-top: 1px dashed red;
+    margin-top: 20px;
+}
+
+.orderinfo .detail {
+    width: 50%;
+    vertical-align: top;
+}
+
+.orderinfo .detail tr {
+    height: 25px;
+}
+
+.orderinfo .detail th {
+    width: 80px;
+    text-align: right;
+}
+
+.ydm-map {
+    color: red;
+    cursor: pointer;
+    padding-left: 30px;
+    font-size: 16px;
+}
+
+#assign_div {
+    display: none;
+    position: absolute;
+    top: 25%;
+    left: 25%;
+    width: 530px;
+    padding: 10px;
+    border: 5px solid #B0D2D8;
+    background-color: white;
+    z-index: 1002;
+    overflow: auto;
+}
+
+#fade {
+    display: none;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    z-index: 1001;
+    -moz-opacity: 0.8;
+    opacity: .80;
+    filter: alpha(opacity=80);
+}
+
+.select-box .select-time {
+    margin: 6px 0
+}
+
+.select-box > * {
+    float: left
+}
+
+#timesel {
+    width: 430px;
+    line-height: 30px;
+    border: 1px solid #ddd;
+    padding: 5px;
+    margin-top: 15px
+}
+
+#timesel > label {
+    margin: 5px 10px;
+}
+
+.storeinfo {
+    width: 100%;
+    border-top: 1px dashed red;
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.saveimei, .savename, .savePrice {
+    display: none;
+}
+
+.paybox {
+    padding: 10px 20px 0px 60px;
+    width: 800px;
+}
+
+.paybox .title {
+    font-weight: bold;
+    padding-bottom: 10px;
+}
+
+.paybox .paybody {
+    max-height: 200px;
+    overflow: auto;
+}
+
+.paybox .paybody .payinfo {
+    font-size: 12px;
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+}
+
+.paybox .paybody .payinfo td {
+    border: 1px solid #464849;
+    text-align: center;
+}
+
+.paybox .paybody .payinfo .price {
+    color: red;
+}
+
+.orderDetailBox {
+    padding: 10px 20px 0px 60px;
+    width: 800px;
+}
+
+.orderDetailBox .title {
+    font-weight: bold;
+    padding-bottom: 10px;
+}
+
+.orderDetailBox .orderDetailBody {
+    max-height: 500px;
+    overflow: auto;
+}
+
+.orderDetailBox .orderDetailBody .orderDetailInfo {
+    font-size: 12px;
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+}
+
+.orderDetailBox .orderDetailBody .orderDetailInfo td {
+    border: 1px solid #464849;
+    text-align: center;
+}
+
+.orderDetailBox .orderDetailBody .orderDetailInfo .price {
+    color: red;
+}
+
+
+.orderBox {
+    padding: 10px 20px 0px 60px;
+    width: 800px;
+}
+
+.orderBox .title {
+    font-weight: bold;
+    padding-bottom: 10px;
+}
+
+.orderBox .orderBody {
+    max-height: 200px;
+    overflow: auto;
+}
+
+.orderBox .orderBody .orderInfo {
+    font-size: 12px;
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+}
+
+.orderBox .orderBody .orderInfo td {
+    border: 1px solid #464849;
+    text-align: center;
+}
+
+.orderBox .orderBody .orderInfo .price {
+    color: red;
+}

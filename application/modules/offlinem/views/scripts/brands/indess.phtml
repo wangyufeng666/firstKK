@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="minimal-ui,width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <title>选择商品信息描述</title>
+    <meta name="keywords" content="有得卖网,以旧换新" />
+    <link rel="stylesheet" type="text/css" href="/css/common/new0917/common.min.css?v=<?php echo v_css;?>"/>
+    <link type="text/css" rel="stylesheet" href="/css/offlinem/inquiry/inquiry.min.css?v=190927<?php echo v_css;?>"/>
+    <script type="text/javascript" src="<?php echo IMG01_DOMAIN; ?>/common/jquery-1.11.2.min.js"></script>
+    <script type="text/javascript">
+        var sslxId = '<?php echo $this->sslxId;?>';
+    </script>
+</head>
+<body ydm-recycle-spm="ydmM05_loading">
+<div class="login_code hide"></div>
+<form id="addForm" name="addForm" action="/offlinem/inquiry/inquiry" method="post" >
+    <input type="hidden" id="spId" name="spId" value="<?php echo $this->spId;?>"/>
+    <input type="hidden" id="typeId" name="typeId" value="<?php echo $this->typeId;?>"/>
+    <input type="hidden" id="radioIds" name="radioIds"/>
+    <input type="hidden" id="multiIds" name="multiIds"/>
+</form>
+<div id="head" class="header">
+    <div id="headerGoBack" class="left"><div class="back"></div></div>
+    <span>商品状态描述</span>
+    <a href="/offlinem/product/index"><div id="goHomePage" class="right"><div class="goHome"></div></div></a>
+</div>
+<div class="ydm_container_box">
+    <div class="bar_box hide">
+        <div class="inner_bar thembg">0%</div>
+    </div>
+    <?php
+    if($this->merInfo){
+        $merType = $this->merInfo['MERTYPE'];
+        ?>
+        <div class="inquery_mername"><?php echo $this->merInfo['PNAME'].' '.$this->merInfo['MERNAME'];?></div>
+        <div class="bg_speed_progress">
+            <div class="speed_progress"></div>
+        </div>
+        <div id="stepItems" class="stepItems">
+            <?php
+            if(sizeof($this->guizeList) > 0){
+
+                $i = 0;
+                $active_class;
+                foreach($this->guizeList as $detail){
+
+
+
+
+                    $i++;
+                    if($i != 1){ //临时判断
+                        $active_class = '';
+                    }else{
+                        $active_class = 'actived';
+                    }
+                    $selectMode = $detail['SELECTMODE'];
+                    $typeId = $detail['RULETYPEID'];
+                    $multiText = $selectMode == 'C' ? '' : '';
+                    ?>
+                    <div class="stepItem <?php echo $active_class;?>" data-type="<?php echo $selectMode;?>">
+                        <div class="title open clearfix">
+                            <?php
+                            $textClass = '';
+                            if($selectMode == 'C'){
+                                echo '<div class="text moretext left">'.$i.'、'.$detail['RULETYPENAME'].'</div>';
+                            }else{
+                                echo '<div class="text left" title="'.$detail['RULETYPENAME'].'">'.$i.'、'.$detail['RULETYPENAME'].'</div>
+                                <div class="show_infobox clearfix right">
+                                    <span class="selected_text left"></span>
+                                    <span class="modify right">修改</span>
+                                </div>';
+                            }?>
+                        </div>
+                        <ul class="cards clearfix" type="<?php echo $selectMode;?>">
+                            <?php
+                            if(sizeof($detail['DETAILS']) > 0){
+                                foreach($detail['DETAILS'] as $detail){
+                                    $text = $detail['RULEDETAILNAME'];
+                                    $text_length = strlen($text);
+                                    $imgPath='';
+                                    $imgPathFlag='';
+
+                                    if($detail['IMGS']){
+                                        $imgPath = '<img title="'.$detail['IMGS'][0]['TEXTDESC'].'" src="'.$detail['IMGS'][0]['IMGPATH'].'" >';
+                                        $imgPathFlag = 'img_path';
+                                        if($text_length >= 39){
+                                            $text = mb_substr($text,0,13,"UTF-8").'<br />'.mb_substr($text,13,$text_length,"UTF-8");
+                                        }
+                                    }
+                                    echo '<li class="card '.$imgPathFlag.'" title="'.$detail['RULEDETAILNAME'].'" id="'.$detail['RULEDETAILID'].'">'.$imgPath.$text.'</li>';
+                                }
+                            }
+                            ?>
+                        </ul>
+                    </div>
+                <?php }} ?>
+        </div>
+        <!--<div class="img_slide">
+            <img class="close_img" src="https://alicdn01.youdemai.com/images/ydmapp/common/icon/new_popimg_close.png"/>
+            <div class="img">
+                <img src="http://images.youdemai.com/images/ruleimg/mobile/pmxs/001.jpg"/>
+            </div>
+            <div class="img_text"></div>
+        </div>-->
+        <div class="nextstep" id="btn_submit">立即询价</div>
+    <?php } ?>
+</div>
+</body>
+<script type="text/javascript" src="/js/view/offlinem/common/common.min.js?v=<?php echo v_js;?>"></script>
+<script type="text/javascript" src="/js/view/offlinem/inquiry/inquiry.min.js?v=<?php echo v_js;?>"></script>
+<script type="text/javascript" src="/js/view/offlinem/common/popup.js?v=<?php echo v_js;?>"></script>
+</html>

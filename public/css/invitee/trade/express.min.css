@@ -1,0 +1,68 @@
+#pullUp{padding:.3rem 0 .3rem .3rem;color:#333;line-height:.3rem;height:.9rem;font-size:.24rem;text-align:center;}
+.infolist{margin-top:.16rem;background:#fff;padding:0 0 0 .3rem;}
+.infolist li.title{color:#333;border-bottom:1px solid #e6e6e6;padding:0 .3rem .2rem 0;}
+.infolist li.bottom1{border-bottom:1px solid #e6e6e6;padding:.2rem .3rem .2rem;}
+.infolist li .libox{line-height:.48rem;}
+.infolist li .textright{width:40%;padding-top:.1rem;font-size:.3rem;color:#333333;font-weight:bold;}
+.infolist li .left-box img{width:1.2rem;}
+.infolist li .textright{text-align:right;}
+.infolist li .right-box .mername{color:#333;font-size:.28rem;line-height:.3rem;height:.6rem;overflow:hidden;}
+.infolist li .right-box .orderdate{color:#999;font-size:.22rem;line-height:.3rem;padding-top:.2rem;}
+.infolist li .right-box .cptext{font-size:.24rem;}
+.infolist li .right-box .cpprice{font-size:.3rem;font-weight:bold;}
+.infolist li .right-box .cpprice .blod{font-weight:bold;font-size:.24rem;}
+.infolist li .bottom{padding-right:.3rem;color:#333;}
+.infolist li .bottom .price{float:left;line-height:.5rem;}
+.infolist li .bottom .price .cptext{font-size:.24rem;}
+.infolist li .bottom .price .cpprice {font-size:.3rem;font-weight:bold;}
+.infolist li .bottom .price .cpprice .blod {font-weight:bold;font-size:.24rem;}
+.infolist li .bottom .btn{float:right;border:.02rem solid #e6e6e6;padding:.1rem .2rem;font-size:.24rem;color:#333;margin-left:.2rem;border-radius:.05rem;min-width:1.4rem;text-align:center;height:.56rem;line-height:.4rem;}
+.infolist li .bottom .btn.red{color:#EF3030;border:.02rem solid #EF3030;}
+.flowlist{margin-top:.16rem;background:#fff;padding:.3rem 0 .3rem .3rem;}
+.flowlist li{position:relative;padding-top:.2rem;font-size:.28rem;color:#999;}
+.flowlist li.title{color:#333;border-bottom:1px solid #e6e6e6;padding:0 .3rem .2rem 0;}
+.flowlist li.step{padding:0 .3rem .3rem .5rem;background:url(/images/m/icon/time_line_bg.png) 0 0rem repeat-y;margin-left:.1rem;}
+.flowlist li.step .point{display:block;width:.14rem;height:.14rem;background:#dadada;position:absolute;top:.1rem;left:-.06rem;border-radius:.14rem;}
+.flowlist li.step .node .text{color:#ccc;font-size:.24rem;line-height:.3rem;}
+.flowlist li.step .node .date{color:#ccc;font-size:.24rem;line-height:.3rem;padding:.1rem 0;}
+.flowlist li.top{margin-top:.3rem;padding-top:0;}
+.flowlist li.top .point{display:block;width:.3rem;height:.3rem;background:#bbf0bc;position:absolute;top:0;left:-.12rem;border-radius:.3rem;}
+.flowlist li.top .point>i{display:block;width:.24rem;height:.24rem;background:#06c70b;position:absolute;top:.03rem;left:.03rem;border-radius:.24rem;}
+.flowlist li.top .node .text{color:#06c70b;}
+.flowlist li.top .node .date{color:#06c70b;}
+.flowlist li.bottom{margin-bottom:.3rem;padding-bottom:0;}
+
+.infolist{padding-left:.3rem;background:#fff;margin-top:.16rem;}
+.infolist li .right-box .partner{color:#333;font-size:.28rem;text-align:right;padding-right:.3rem;}
+.sidebar-content .sidebar-header{position:relative;height:.88rem;background:#FFFFFF;line-height:.88rem;border-bottom:1px solid #DCDCDC;}
+.sidebar-content .sidebar-header .title{font-size:.28rem;text-align:center;}
+.sidebar-content .sidebar-header .back{position:absolute;top:.3rem;left:.3rem;display:inline-block;width:.2rem;height:.2rem;border:solid #5D5D5D;border-width:1px 0 0 1px;
+-webkit-transform:rotate(-45deg);-moz-transform:rotate(-45deg);-ms-transform:rotate(-45deg);transform:rotate(-45deg);}
+.sidebar-content .sidebar-header .close{position:absolute;top:.2rem;right:.3rem;display:inline-block;width:.3rem;height:.3rem;background: url(/images/m/index/indexicon.png) -170px -140px ;}
+.menu-sidebar{position:fixed;bottom:0;left:0;width:80%;height:100%;overflow:hidden;z-index:9999;background:#fff;
+-webkit-transform:translate(2000px,0);-moz-transform:translate(2000px,0);;-ms-transform:translate(2000px,0);;
+-o-tranform:translate(2000px,0);;transform:translate(2000px,0);;-webkit-transition:all .5s ease-out;-moz-transition:all .5s ease-out;}
+.sidebar-items-container {position:relative;width:100%;background:#fff;}
+.sidebar-wrapper{
+-webkit-transform:translate(0px, 0px);-webkit-transition-property:transform;-webkit-transition-duration:300ms;-transform:translate(0px, 0px);
+-moz-transform:translate(0px, 0px);-moz-transition-property:transform;-moz-transition-duration:300ms;overflow:none;-transition-property:transform;-transition-duration:300ms;
+}
+.sidebar-list li{height: .8rem;    line-height: .5rem;    font-size: .24rem;    color: #252525;}
+.sidebar-list li.checked{color:#EF3030;}
+.sidebar-wrapper .sidebar-list{background:#fff;overflow-y:auto;}
+.sidebar-wrapper .sidebar-list>li{padding:.15rem .1rem .15rem .2rem;border-bottom:1px solid #E6E6E6;}
+.go{
+position: absolute;width: 0.2rem;height: 0.2rem;border: solid #5D5D5D;border-width: 0 1px 1px 0;
+-webkit-transform: rotate(-45deg);-moz-transform: rotate(-45deg);-ms-transform: rotate(-45deg);-o-transform: rotate(-45deg);transform: rotate(-45deg);
+}
+.infolist li{position:relative;padding:.2rem 0 .2rem 0;border-bottom: 1px solid #e6e6e6;overflow: hidden;font-size: 1.3rem;color: #999;height:.88rem;line-height:.48rem;}
+.infolist li .left-box{width:20%;display:inline-block;font-size:.28rem;color:#333;}
+.infolist li .right-box{width:75%;padding-left:.3rem;display:inline-block;color:#333;font-size:.28rem;position:relative;}
+.infolist li .right-box .go{top:.13rem;right:0;}
+.infolist li .right-box .input{width:4rem;font-size:.28rem;color:#333;border:0;line-height:.3rem;}
+.infolist li .right-box .express{width:4rem;color:#333;font-size:.28rem;}
+.infolist li .right-box .subway{width:4rem;color:#333;font-size:.28rem;}
+.slide-mask{position:fixed;z-index:8;left:0;top:0;bottom:0;width:100%;height:100%;background:rgba(0, 0, 0, 0.4);-webkit-transition:all 0.3s ease-out;transition:all 0.3s ease-out;display:none;transform-origin:0px 0px 0px;opacity:1;transform:scale(1, 1);}
+.btnArea{padding:.2rem .24rem;}
+.btn-submit{border-radius:.05rem;text-align:center;font-size:.32rem;background:#EF3030;color:#fff;line-height:.7rem;}
+.description{padding:.4rem .3rem;font-size:.22rem;line-height:.3rem;color:#999;}

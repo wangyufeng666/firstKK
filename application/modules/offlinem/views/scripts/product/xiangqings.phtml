@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta content="width=device-width,minimum-scale=1.0,maximum-scale=1.0" name="viewport" />
+    <meta name="format-detection" content="telephone=no" />
+    <title>我的订单,查看订单详情</title>
+    <meta name="keywords" content="线下系统,线下系统,线下系统以旧换新,线下系统以旧换新"/>
+    <meta name="description" content="线下系统,线下系统,线下系统以旧换新,线下系统以旧换新"/>
+    <link type="text/css" rel="stylesheet" href="/css/common/new0917/common.min.css?v=<?php echo v_css;?>"/>
+    <script type="text/javascript" src="<?php echo IMG01_DOMAIN; ?>/common/jquery-1.11.2.min.js"></script>
+    <style type="text/css">
+        body{background:#fafafa;}
+        .ydm_header{padding-top:0;height:44px;}
+        .ydm_header .backpage{top:0;cursor:pointer;}
+        .ydm_container_box{padding: 0.2rem 0 0rem;background: #F5F5F5;}
+
+        .order_info{padding: 0.3rem 0 0rem;}
+        .order_info.or_btm{padding-bottom: 0.3rem;}
+        .order_info.or_eval{padding-bottom: 1.2rem;}
+
+        .order_step_box{width: 92%;margin: 0rem auto 0;}
+        .order_step_box .order_inner{background: #fff;padding: 0.35rem 0.2rem 0.35rem;border-radius: 0.2rem;}
+        .order_step_box .step_box .text{width: 22.75%;text-align: center;padding: 0.15rem 0;background: #fff;border: 1px solid #F5F5F5;font-size: 0.28rem;border-radius: 0.4rem;line-height:1;}
+        .order_step_box .step_box .text.on{color: #fff;background: #ff1744;}
+        .order_step_box .step_box .line{width: 3%;height: 1px;background: #ddd;margin-top: 16px;}
+        .order_step_box .step_box .line.on{background: #D85A57;}
+        .order_step_box .step_box .line:last-child{display: none;}
+
+        .order_step_box .orderlogs{margin-top: 0.15rem;padding: 0.35rem 0rem 0 0;background: url(https://alicdn01.youdemai.com/images/ydmapp/common/icon/new_icon_right.png)no-repeat 98% 0.36rem;background-size: 0.2rem;}
+        .order_step_box .orderlogs .newlogs{height: 0.4rem;padding-left: 0.55rem;background: url(https://alicdn01.youdemai.com/images/ydmapp/common/icon/icon_red_point.png)no-repeat 0.2rem 0.07rem;background-size: 0.15rem;overflow: hidden;font-size: 0.26rem;cursor:pointer;padding-right: 0.2rem;white-space: nowrap;text-overflow: ellipsis;}
+        .order_step_box .orderlogs .newlogs span{padding-left: 0.25rem;color: #999;font-size: 0.22rem;}
+
+        .order_info .list{background: #fff;width: 92%;margin:0 auto;border-radius: 0.2rem;padding: 0.25rem 0.35rem;}
+        .order_info .list .order_header{padding-bottom: 0.25rem;}
+        .order_info .list .order_header .orderno{color: #333;font-size: 0.28rem;}
+        .order_info .list .order_header .orderno:last-child{margin-top: 0.05rem;color: #999;}
+        .order_info .list .order_header .right{color: #998A6B;background: #F5EEE0;padding: 0.04rem 0.05rem;border-radius: 0.06rem;font-size:0.26rem;}
+        .order_info .list .order_contain{padding: 0.2rem 0;border-top: 1px dotted #ddd;border-bottom: 1px dotted #ddd;}
+        .order_info .list .order_contain .img{width: 25%;}
+        .order_info .list .order_contain .merinfo{width: 70%;margin-top:0.1rem;}
+        .order_info .list .order_contain .merinfo .mername{font-size: 0.3rem;font-weight: bold;line-height: 0.4rem;max-height: 0.8rem;overflow: hidden;}
+        .order_info .list .order_contain .merinfo .addprice{font-size: 0.26rem;padding-top: 0.07rem;}
+        .order_info .list .order_contain .merinfo .addprice>div{font-size: 0.26rem;}
+        .order_info .list .order_contain .merinfo .addprice .add{color: #999;}
+        .order_info .list .order_contain .merinfo .inqprice{font-size: 0.26rem;margin-top: 0.1rem;}
+        .order_info .list .order_contain .merinfo .inqprice>div{font-size: 0.26rem;}
+        .order_info .list .merprice{padding-top: 0.25rem;}
+        .order_info .list .merprice .left{font-size: 0.3rem;font-weight: bold;}
+        .order_info .list .merprice .right{font-size: 0.3rem;font-weight: bold;}
+
+        .user_info{width: 92%;margin: 0.3rem auto 0;background: #fff;border-radius: 0.2rem;overflow: hidden;}
+        .user_info.order_top{padding-top: 0.14rem;background: #fff url(https://alicdn01.youdemai.com/images/ydmapp/order/orderdetail/order_top.png)no-repeat top left;background-size: 100%;}
+        .user_info .userlist{border-bottom: 1px solid #F5F5F5;padding: 0.35rem 0.3rem;}
+        .user_info .userlist .left{width: 30%;font-size: 0.3rem;}
+        .user_info .userlist .right{width: 70%;font-size: 0.3rem;text-align: right;}
+
+        .order_info .list_info{width: 92%;margin: 0.3rem auto 0;border-radius: 0.2rem;padding-bottom: 0.3rem;}
+        .order_info .list_info .list_inner{background: #fff;border-radius: 0.2rem}
+        .order_info .list_info .list_item{line-height: 0.5rem;font-size: 0.28rem;}
+        .order_info .list_info .item{font-size:0.28rem;}
+        .order_info .list_info .item.differ{font-size:0.28rem;color: #FF0000;}
+        .order_info .list_info .list_item span{line-height: 0.5rem;font-size: 0.28rem;}
+        .order_info .list_info .inquiry_header{display: -webkit-flex;display: flex;-webkit-justify-content: space-around;justify-content: space-around;background: #fff;border-bottom: 1px solid #F5F5F5;border-radius: 0.2rem 0.2rem 0 0;}
+        .order_info .list_info .inquiry_header .nav_box{padding: 0.3rem 0rem;border-bottom: 2px solid #fff;font-size: 0.3rem;font-weight: bold;cursor:pointer;}
+        .order_info .list_info .inquiry_header .nav_box.selected{color: #DA3B26;border-bottom: 2px solid #DA3B26;}
+        .order_info .list_info .inquire_info{padding: 0.2rem 0.3rem;}
+        .order_info .list_info .inquire_info .colorred{color: #DA3B26;}
+        .order_info .list_info .inquire_info .no_inquiry{font-size: 0.28rem;padding: 0.5rem 0;}
+
+        .del_order{width: 100%;margin: 0rem auto;line-height: 1.0rem;text-align: center;font-size: 0.32rem;color: #998A6B;background: #F5EEE0;cursor:pointer;}
+        .evaluate{position: fixed;bottom: 0;left: 0;width: 100%;line-height: 1.0rem;text-align: center;font-size: 0.32rem;cursor:pointer;}
+        .noresult{text-align:center;}
+    </style>
+</head>
+<body>
+<div id="head" class="header">
+    <div id="headerGoBack" class="left"><div class="back"></div></div>
+    <span>订单详情</span>
+    <a href="/offlinem/product/seeorder"><div id="goHomePage" class="right"><div class="goHome"></div></div></a>
+</div>
+<div class="ydm_container_box">
+    <?php
+    if($this->list){
+    foreach ($this->list as $k=>$v){
+
+
+    ?>
+    <div class="order_info">
+        <div class="list" id="">
+            <div class="order_header clearfix">
+                <div class="left">
+                    <div class="orderno">订单编号：<?php echo $v['ID']; ?></div>
+                    <div class="orderno">下单时间：<?php echo $v['SHIJIAN']; ?></div>
+                </div>
+
+            </div>
+            <div class="order_contain clearfix">
+                <div class="img left"><img src="<?php echo $v['IMAGE'] ?>"/></div>
+                <div class="merinfo right">
+                    <div class="mername"><?php echo $v['PINPAI'];?></div>
+                    <div class="inqprice clearfix">
+                        <div class="left">下单金额：</div>
+                        <?php echo $v['JIAGE'];
+                        ?>
+                    </div>
+                    <div class="addprice clearfix">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="user_info order_top">
+            <div class="userlist clearfix">
+                <div class="left">姓名</div>
+                <div class="right"><?php echo $v['CONTACTS']?></div>
+            </div>
+            <div class="userlist clearfix">
+                <div class="left">联系电话</div>
+                <div class="right"><?php echo $v['CONTACTWAY']?></div>
+            </div>
+            <div class="userlist clearfix">
+                <div class="left">联系地址</div>
+                <div class="right"><?php echo $v['DETAILADDRESS']?></div>
+            </div>
+        </div>
+
+    </div>
+    <div class="out_order" id="delorder">
+        <div class="del_order" order-number='<?php echo $v['ID']?>'>取消订单</div>
+    </div>
+</div>
+<?php }}else{ ?>
+    <div class="noresult ydm-p20">订单已删除或不存在，查无该订单</div>
+<?php } ?>
+</div>
+</body>
+<script type="text/javascript" src="/js/view/offlinem/common/common.min.js?v=<?php echo v_js;?>"></script>
+<script type="text/javascript">
+
+    //取消订单.......
+    $(document).on('click', '.del_order', function(event) {
+        var orderNo = $(this).attr('order-number');
+        window.location.href = '/offlinem/product/ordercancel?id='+orderNo;
+    })
+
+
+</script>
+</html>

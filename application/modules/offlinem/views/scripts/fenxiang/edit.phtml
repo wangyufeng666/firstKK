@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="minimal-ui,width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <title>旧机回收</title>
+    <meta name="keywords" content="线下,线下系统,线下以旧换新,线下系统以旧换新"/>
+    <meta name="description" content="先下,线下系统,线下以旧换新,线下系统以旧换新"/>
+    <link rel="stylesheet" href="<?php echo IMG01_DOMAIN; ?>/common/swiper4.5.0/swiper.min.css">
+    <link type="text/css" rel="stylesheet" href="/css/common/new0917/common.min.css?v=<?php echo v_css;?>"/>
+    <link type="text/css" rel="stylesheet" href="/css/promoter/product/index.css?v=190927<?php echo v_css;?>"/>
+    <script type="text/javascript" src="<?php echo IMG01_DOMAIN; ?>/common/jquery-1.11.2.min.js"></script>
+    <script src="<?php echo IMG01_DOMAIN; ?>/common/swiper4.5.0/swiper.min.js" type="text/javascript" charset="utf-8"></script>
+</head>
+<body id="ydmBody">
+<div class="them_color"></div>
+<div class="gome_offline_contain">
+    <?php $list=$this->list;$lists=$list['0']['PROVINCE']?>
+    <form id="addUserForm" name="addUserForm" action="/offlinem/fenxiang/list" method="post">
+        <table border="1">
+            <input  id="ids" class="ids" type="hidden" value="<?php echo $list['0']['IDS'] ;?>"/>
+            <tr><td>输入姓名</td><td><input  id="nameq" class="nameq"  value="<?php echo $list['0']['NAME'] ;?>"/></td></tr>
+            <tr><td>输入电话</td><td><input  id="telnumber" class="telnumber"  value="<?php echo $list['0']['TELNUMBER'] ;?>"/></td></tr>
+            <tr><td>输入地址：</td><td>
+                    <select id="province" class="province">
+                        <option value="<?php echo $list['0']['PROVINCE'] ;?>">请选择</option>
+                        <?php
+                        if($this->province){
+                            foreach($this->province as $value){
+                                echo '<option value="'.$value['AREA_NAME'].'">'.$value['AREA_NAME'].'</option>';
+                            }
+                        }
+                        ?>
+                    </select>
+                    <select id="city" class="city">
+                        <option value="<?php echo $list['0']['CITY'] ;?>"><?php echo $list['0']['CITY'] ;?></option>
+                    </select></td>
+            </tr>
+            <tr> <td>输入具体地址:</td><td><input  id="dizhi" class="dizhi" value="<?php echo $list['0']['CLASS'] ;?>"  /> </td></tr>
+        </table><td></td><td colspan="2" style="text-align:center;">
+            <div id="btn_submit" name="btn_submit" class="button btn_rosy">保存修改</div>
+        </td>
+    </form>
+</div>
+
+<div class="footer" id="footer">
+    <div class="api_bottom index active" apihref="/offlinem/product/index">首页</div>
+    <div class="api_bottom classify" apihref="/offlinem/brand/list">分类</div>
+    <div class="api_bottom actity" apihref="/offlinem/fenxiang/index">分享</div>
+    <div class="api_bottom center" apihref="/offlinem/center">我的</div>
+</div>
+</body>
+<script type="text/javascript" src="/js/view/offlinem/common/common.min.js?v=<?php echo v_js;?>"></script>
+<script type="text/javascript">
+
+    $().ready(function(){
+        //$('#province').val('<?php //echo $list['0']['PROVINCE'] ;?>//');
+        //表单提交按钮点击事件
+        $('#btn_submit').click(function(){
+
+
+            $('#btn_submit').attr('disabled','disabled');
+
+
+            var params = {};
+            params.ids = $('#ids').val();
+            params.telnumber = $('#telnumber').val();
+            params.nameq = $('#nameq').val();
+            params.province = $('#province').val();
+            params.city = $('#city').val();
+            params.dizhi = $('#dizhi').val();
+            $.post('/offlinem/Fenxiang/upudit', params, function(result){
+                if(result == 'Y'){
+                    window.location.href = '/offlinem/fenxiang/lists';
+                }else{
+                    alert('保存失败');
+                    $('#btn_submit').attr('disabled','');
+                }
+            });
+        });
+    });
+
+</script>
+</html>

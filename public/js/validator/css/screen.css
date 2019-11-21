@@ -1,0 +1,27 @@
+label.error{color:red;}
+div.error{display:none;}
+input[type="text"].error{border:1px solid red;}
+textarea.error{border:1px solid red;}
+select.error{border:1px solid red;}
+
+/*core.css*/
+body{margin:0;padding:0;font-size:small;color:#333}
+h1{font-size:large}
+#main{padding:1em;}
+#banner{padding:15px;background-color:#06b;color:white;font-size:large;border-bottom:1px solid #ccc;background:url(../images/bg.gif) repeat-x;text-align:center}
+#banner a{color:white;}
+p{margin:10px 0;}
+li{margin-left:10px;}
+h3{margin:1em 0 0;}
+h1{font-size:2em;}
+h2{font-size:1.8em;}
+h3{font-size:1.6em;}
+h4{font-size:1.4em;}
+h5{font-size:1.2em;}
+/**********************************
+Use:Reset Styles for all browsers
+***********************************/
+legend {padding:0;color:#000;}
+.error-wraper{}
+.error-ico{width:14px;height:14px;margin:0 3px;background:url('../images/error.png') no-repeat;display:inline-block;vertical-align:middle;}
+.error-msg{color:#C00;padding-left:0px;padding-right:0px;}

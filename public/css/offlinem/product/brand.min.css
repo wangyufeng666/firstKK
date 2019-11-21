@@ -1,0 +1,65 @@
+@CHARSET "UTF-8";
+@media screen and (max-width:320px){
+    .mer-cont-header #brandslist{width:96px;}.mer-cont #brandslist{width:96px;}
+    .mer-cont-header #mersWrapper{left:96px;}.mer-cont #mersWrapper{left:96px;}
+}
+html,body {height: 100%;width:100%;overflow: hidden;position:fixed;}
+body {max-width:100%;font-family: "Noto Sans CJK SC", "Source Han Sans CN";background-size: 60%;overflow:hidden;position: relative;}
+.header{display: block;border-bottom: 1px solid #eee;}
+.header h1{padding-top: 0.1rem;}
+.bandlist_search{width: 90%;height: 0.6rem;line-height: 0.6rem;margin: 0 auto;padding-left: 0.2rem;text-align: left;background: #eee url(/images/index/new/ydm_search.png)no-repeat 95% center;color: #999;border-radius: 0.1rem;background-size: 0.3rem;}
+
+/*.mlist{position:absolute;top:.8rem;left:0;background:#f5f5f5;width:100%;min-width:320px;}*/
+.mlist .mtbox{height:.8rem;line-height:.8rem;overflow-x:auto;width:100%;}
+.mlist li{float:left;height:.8rem;line-height:.8rem;text-align:center;border-bottom:2px solid #F5F5F5;font-size:0.24rem;padding:0 .2rem;}
+.mlist .active{color:#ef3030;border-bottom:2px solid #ef3030;}
+.mt-container{background:#f7f7f7;}
+.mt-container .mt-wrapper .mt-slide{text-align:center;height:.8rem;line-height:.8rem;padding:0 .2rem;-webkit-box-pack:center;-moz-box-pack:center;-ms-flex-pack:center;-webkit-justify-content:center;justify-content:center;}
+.mt-container .mt-wrapper .mt-slide .mt-item{padding:0 .2rem;border-bottom:.02rem solid #fff;float:left;}
+.mt-container .mt-wrapper .mt-slide .mt-item.active{color:#ef3030;}
+.mt-wrapper {background:#f7f7f7 url(/images/bg_img/banner_list_more.png)no-repeat right center;background-size:0.3rem;
+display:-webkit-box;-webkit-align-items:center;align-items:center;overflow-y:hidden;
+-webkit-box-align:center;-moz-box-align:center;-ms-flex-align:center;overflow-x:auto;-webkit-overflow-scrolling:touch;}
+.mt-wrapper li{text-align:center;height:.6rem;line-height:.6rem;padding:0 .28rem;-webkit-box-pack:center;-moz-box-pack:center;-ms-flex-pack:center;-webkit-justify-content:center;justify-content:center;}
+.mt-wrapper li .text{font-size:.28rem;border-bottom:2px solid #fff;height:.56rem;}
+.mt-wrapper li.curr .text{color:#FF5C5C;border-bottom:2px solid #FF5C5C;}
+
+.mer-cont{overflow:hidden;}
+.mer-cont-header{padding-top: 0rem;}
+.sortslist{float: left;height: 600px;overflow-y: scroll;width: 30%;font-size:.26rem;text-align: center;background: #eee;}
+.sortslist .item{position:relative;}
+.sortslist .item .item_inner{padding: 0.42rem 0;font-size:.28rem;}
+.sortslist .item.active{background:#fff;}
+.sortslist .item.active .item_inner{color:#FF2941;}
+.sortslist .item .red_line{position:absolute;top:0.42rem;left:0;width:0.12rem;height:0.4rem;background:url('https://img01.youdemai.com/images/ydmapp/product/icon/type_selected.png') no-repeat;background-size:100% 100%;display:none;}
+.sortslist .item.active .red_line{display:block;}
+
+.mersScroller{float: left;width: 70%;height: 600px;padding-left:0.24rem;box-sizing:border-box;}
+.mersScroller .mer-item,.productList .product-item{background:#fff;display:flex;border-bottom:1px solid #EAECEE;align-items:center;height:1.12rem;cursor:pointer;}
+.mersScroller .mer-item .item_img{width: 28%;margin-right:0.2rem}
+.mersScroller .mer-item img{width:100%;}
+.mersScroller .mer-item .item_name,.item_img,.productList .product_name{width: 70%;font-size: 0.3rem;}
+.productList .loading{text-align: center;line-height: 0.6rem;font-size: 0.26rem;color: #666;}
+.check_btn{position:fixed;left:63%;margin-left:-1rem;width:2rem;bottom: 20px;z-index:22;}
+.check_btn button{width:100%;padding:0.15rem 0;border-radius:20px;background:#da3b26;display:inline-block;color:#fafafa;}
+.header{position: fixed;top: 0;left: 0;width: 100%;}
+.no_result{text-align: center;font-size: 0.32rem;padding-top: 0.5rem;}
+.search_box{width: 92%;margin: 0 auto;padding: 0.18rem 0;margin-top: 44px;background: #fff;}
+.search_box .search_inner{padding: 0.17rem 0.81rem;font-size: 0.26rem;color: #aaa;background: #F5F5F5 url(https://alicdn01.youdemai.com/images/ydmapp/common/icon/icon_search.png)no-repeat 0.3rem center;background-size: 0.3rem;border-radius: 0.06rem;}
+.mer-cont{position:relative;}
+.navLists{position:fixed;width:100%;height:100%;top:0;background:rgba(0,0,0,.5);left:100%;display:flex;z-index:12;}
+.navLists.active{animation:mymove 5s 1;-webkit-animation:mymove 0.5s ease 1 forwards;}
+.navLists .nav_back{width:30%;height:100%;background:none;text-align:center;padding-top:60%;box-sizing:border-box;}
+.navLists .nav_back button{font-size: 0.3rem;background:none;color:#fff;border-radius:0.3rem;padding:0.1rem 0;border:1px solid #fff;width:86%;background:url('https://img01.youdemai.com/images/ydmapp/common/icon/white_left.png')no-repeat left 0.1rem center;background-size:0.2rem;}
+.navLists .productList{width:70%;height:100%;background:#fff;padding-left:0.24rem;box-sizing:border-box;}
+@keyframes mymove
+{from {left:100%;}to {left:0;}}
+@-webkit-keyframes mymove /*Safari and Chrome*/
+{from {left:100%;}to {left:0;}}
+.productList .product-item .product_img{height:0.8rem;margin:0 0.2rem;}
+.productList img{height:0.8rem;}
+.box{display:none;}
+.sortslist .item.active .box{display:block;}
+.box .items_inners{padding: 0.3rem 0;font-size: .28rem;}
+.box .items_inners.selected{background:#FFF0F2;}
+.product_box,.sorts_box,.brand_box{height:100%;overflow-y:scroll;-webkit-overflow-scrolling : touch;}

@@ -1,0 +1,50 @@
+body{background: #F5F5F5;}
+.nocredit {height:0.6rem;line-height:0.6rem;text-align:center;background:#fff4cd;color:#f5921e;font-size:0.23rem;}
+.border_top{border-top: 0;margin-top:0;}
+.header_name{font-size: 0.25rem;margin-top: 0.16rem;padding: 0.23rem 0.2rem;border: solid #ddd;border-width: 1px 0;font-weight: bold;background: #fff;color: #333;}
+.border_none{border-bottom: 1px solid #F5F5F5;}
+.zhuma_box{padding: 0 0.39rem 0 0.23rem;color: #323232;font-size: 0.24rem;height: 0.9rem;line-height: 0.9rem;}
+.install{background: #fff;border-bottom: 1px solid #ddd;}
+.report_conta{margin-bottom: 1.1rem;}
+.install .select_detaial{width: 92%;margin: 0 auto;padding: 0.2rem 0 0.3rem 0;}
+.install .select_detaial .attr_img{float: left;width: 30%;text-align: center;}
+.install .select_detaial .attr_img img{border: 1px solid #ddd;padding: 0.1rem;border-radius: 0.1rem;box-sizing: border-box;}
+.install .select_detaial .attr_type{float: left;width: 70%;}
+.install .select_detaial .attr_type .attr_phonename{font-size: 0.28rem;color: #323232;line-height: 0.45rem;width: 3.0rem;}
+.install .select_detaial .attr_type .attr_configure{font-size: 0.24rem;color: #999;line-height: 0.45rem;}
+.install .select_detaial .attr_type .attr_rent_money{font-size: 0.24rem;color: #999;line-height: 0.45rem;}
+.install .select_detaial .attr_type .attr_rent_money span{color: #DE242B;font-size: 0.3rem;}
+
+.way_nav_text{background: #fff;margin-top: 0.2rem;padding: 0 0.39rem;border: solid #ddd;border-width: 1px 0;}
+.way_nav_text >div{height: 0.7rem;line-height: 0.7rem;font-size: 0.22rem;border-bottom: 1px solid #F5F5F5;}
+.way_nav_text >div:last-child{border-bottom: none;}
+.way_nav_text .left{float: left;width: 27%;color: #323232;}
+.way_nav_text .right{float: right;width: 22%;text-align: right;color: #999;}
+.way_nav_text .red{color: #ED172B;}
+.way_nav_text .right img{width: 1.2rem;}
+.way_nav_text .text{width:48%;color:#999;}
+.rent_box{position: fixed;bottom: 0;width: 100%;background: #fdfdfd;}
+.rent_box .header_pay{font-size: 0.23rem;line-height: 0.9rem;border-top: 1px solid #ddd;padding-left: 0.3rem;font-weight: bold;color: #363636;}
+.rent_box .header_pay span{float: left;display: inline-block;}
+.rent_box .header_pay .pay_deposit{color: #BE1B17;font-size: 0.3rem;}
+.rent_box .header_pay .to_apply{float: right;width: 2.0rem;text-align: center;background: #ef3030;color: #fff;}
+.rent_box .header_pay .no_apply{background:#ddd;}
+
+.user_address{background: #fff;border-bottom: 1px solid #ddd;}
+.header_name span{float: right;color: #6886DF;}
+.add_address{height: 1rem;line-height: 1rem;padding-left: 0.5rem;font-size: 0.24rem;font-weight: bold;background: url(/images/zzy/img/zy_city_right.png) no-repeat 90% center;background-size:0.2rem;}
+.zy_address_header{padding: 0.25rem 0.2rem 0.15rem;background: url(/images/zzy/img/zy_city_right.png)no-repeat 94% center;background-size: 0.2rem;}
+.zy_address_header span{font-size: 0.22rem;color: #323232;font-weight: bold;}
+.zy_address_header .zy_name{margin: 0 0.3rem 0 0.25rem;}
+.zy_address_header .zy_address{width: 92%;padding-left: 0.3rem;color: #999;font-size: 0.23rem;line-height: 0.5rem;white-space: nowrap;text-overflow: ellipsis;overflow: hidden;background: url(/images/zzy/img/icon_localtion.png)no-repeat left 0.1rem;background-size: 0.19rem;}
+
+.terms_box{padding: 0.15rem 0;background: #fff;}
+.terms_box .fl_term{float: left;line-height: 20px;padding:0.2rem 0.5rem 0.2rem 0.5rem;text-align: center;}
+.terms_box .fl_term>div{float: left;}
+.terms_box .fl_term .igree{color: #999;text-align: center;}
+.terms_box .fl_term #term a{color: #999;}
+.terms_box .fl_term .checkbox{width: 19px;height:19px;background: url(/images/zzy/img/checkbox.png) 0px -20px no-repeat;margin-right: 0.1rem;background-size: 19px 40px;}
+.terms_box .fl_term .checked{background: url(/images/zzy/img/checkbox.png) 0px 0px no-repeat;background-size: 19px;}
+#terms{position: fixed;}
+.terms_box .question{float: right;text-align:right;padding:0.2rem 0.5rem 0.2rem 0.5rem;line-height: 19px;}
+.terms_box .question a{color:#0066CC;font-size:0.24rem;}

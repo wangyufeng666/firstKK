@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="minimal-ui,width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <title>旧机回收</title>
+    <link rel="stylesheet" href="<?php echo IMG01_DOMAIN; ?>/common/swiper4.5.0/swiper.min.css">
+    <link type="text/css" rel="stylesheet" href="/css/common/new0917/common.min.css?v=<?php echo v_css;?>"/>
+    <link type="text/css" rel="stylesheet" href="/css/promoter/product/index.css?v=190927<?php echo v_css;?>"/>
+    <script type="text/javascript" src="<?php echo IMG01_DOMAIN; ?>/common/jquery-1.11.2.min.js"></script>
+    <script src="<?php echo IMG01_DOMAIN; ?>/common/swiper4.5.0/swiper.min.js" type="text/javascript" charset="utf-8"></script>
+</head>
+<body id="ydmBody">
+
+<div class="gome_offline_contain">
+    <div class="swiper_banner_container">
+
+            <div class="swiper-slide">
+                <img style="width: 645.6px;height: 302.63px" src="/images/common/wyf.png">
+            </div>
+
+    </div>
+
+    <div class="main_list_category">
+        <div class="type_list_header clearfix">
+            <div class="left pfm icon_type">商品品类</div>
+        </div>
+        <ul>
+            <li>
+                <a href="/offlinem/product/shouji?mertype=手机">
+                    <img src="https://img01.youdemai.com/images/ydmapp/index/285/classify_J.png" />
+                    <div class="text">手机</div>
+                </a>
+            </li>
+            <li>
+                <a href="/offlinem/product/shouji?mertype=电脑">
+                    <img src="https://img01.youdemai.com/images/ydmapp/index/285/classify_L.png" />
+                    <div class="text">笔记本</div>
+                </a>
+            </li>
+            <li>
+                <a href="/offlinem/product/shouji?mertype=平板">
+                    <img src="https://img01.youdemai.com/images/ydmapp/index/285/classify_K.png" />
+                    <div class="text">平板</div>
+                </a>
+            </li>
+        </ul>
+    </div>
+
+</div>
+
+</body>
+<script type="text/javascript" src="/js/view/offlinem/common/common.min.js?v=<?php echo v_js;?>"></script>
+<script type="text/javascript">
+    //banner图轮播
+    //  var mySwiper = new Swiper('.swiper_banner_container',{
+    //      pagination:'.swiper-pagination',
+    //      paginationClickable:true,
+    //      loop:true,
+    //      autoplay:3000
+    //  });
+    //
+    //合作伙伴轮播
+    var partnerSwiper = new Swiper('.swiper-partner', {
+        pagination:'.swiper-pagination',
+        spaceBetween:30,
+        autoplay:5000,
+        loop:true
+    });
+
+    getHotmer('J');
+    $('.hot_mer_list .mer_list').bind('click',function(){
+        var dataSpm = $(this).attr('ydm-recycle-hottypes');
+        $('.hot_mer_list .mer_list').removeClass('thembg');
+        var index = $(this).addClass('thembg').attr('tabindex');
+        getHotmer(index);
+    });
+
+
+    var typeArr =[];
+    function getHotmer(index){
+        $.ajax({type:'GET',dataType:'jsonp',jsonp:'jsonp_callback',cache:false,async:false,
+            data:{merType:index,num:'4'},
+            url:'https://openapi.youdemai.com/products/hot/hotproduct',
+            success:function(data){
+                var html = '';var imgUrl = '';
+                for(var i in data.hotMer){
+                    var hrefUrl = '/offlinem/inquiry/init?spid='+data.hotMer[i].SPID;
+                    imgUrl = 'https://images.youdemai.com/nwimages/images/thumbs/'+data.hotMer[i].MERIMG;
+                    html += '<li class="img">';
+                    html += '<a href="'+hrefUrl+'">';
+                    html += '<img class="mer_img" src="'+imgUrl+'" />';
+                    html += '<div class="mer_name ellipsis">'+data.hotMer[i].MERNAME+'</div>';
+                    html += '</a>';
+                    html += '</li>';
+                }
+                $('.hot_box .hot .clearfix').html(html);
+            }
+        });
+    };
+
+
+</script>
+
+</html>

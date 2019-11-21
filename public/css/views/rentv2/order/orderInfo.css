@@ -1,0 +1,66 @@
+.contentBox{
+    display: -webkit-flex; /* Safari */
+    display: flex;
+    flex-direction:column;
+    padding-bottom: 500px;
+}
+.contentBox .item{
+    padding-bottom:20px;
+    border-bottom: 1px solid #f2f2f2;
+}
+
+.contentBox .orderInfo{
+    display: -webkit-flex; /* Safari */
+    display: flex;
+    flex-flow: row wrap;    /* 主轴从左到右，超出换行 */
+    justify-content:space-between; /* 两端对齐 */
+}
+
+.contentBox .orderInfo .info{
+    width: 30%;
+    padding-bottom:20px;
+}
+
+.contentBox .remarks .remarkInfo:first-child{
+    color: red;
+}
+
+.contentBox .item .title{
+    padding: 20px 0 10px 0;
+    font-size:18px;
+    font-weight: 600;
+}
+
+.contentBox .map{
+    padding-top: 20px;
+}
+
+.return-back .express-no{
+    padding: 5px 20px;
+    background-color: #FFF;
+    border-radius: 4px;
+    border: 1px solid #DCDFE6;
+    margin-right: 10px;
+}
+
+.return-back .save-express-no{
+    width: 150px;
+    margin-right: 10px;
+}
+
+.return-image .block{
+    padding: 10px;
+    text-align: center;
+    display: inline-block;
+    width: 20%;
+    box-sizing: border-box;
+    vertical-align: top;
+}
+
+.return-image .demonstration{
+    display: block;
+    color: #8492a6;
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+

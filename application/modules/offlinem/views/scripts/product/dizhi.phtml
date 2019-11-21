@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="minimal-ui,width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="format-detection" content="telephone=no">
+    <meta http-equiv="x-rim-auto-match" content="none">
+    <title>地址管理</title>
+    <link type="text/css" rel="stylesheet" href="/js/validator/css/screen.css"/>
+    <meta name="keywords" content="线下,线下系统,线下以旧换新,线下系统以旧换新"/>
+    <meta name="description" content="线下,线下系统,线下以旧换新,线下系统以旧换新"/>
+    <link type="text/css" rel="stylesheet" href="/css/common/common.min.css?v=<?php echo v_css;?>"/>
+    <link rel="stylesheet" type="text/css" href="/css/common/new0917/common.min.css?v=<?php echo v_css;?>"/>
+    <link rel="stylesheet" type="text/css" href="/css/offlinem/trade/orders.min.css?v=<?php echo v_css;?>"/>
+    <script type="text/javascript" src="<?php echo IMG01_DOMAIN; ?>/common/jquery-1.11.2.min.js"></script>
+    <script type="text/javascript" src="/js/jquery-1.8.2.min.js"></script>
+    <script type="text/javascript" src="/js/layer/v3.0/layer.js"></script>
+    <script type="text/javascript" src="/js/validator/uiwidget-validator.min.js"></script>
+    <script type="text/javascript" src="/js/validator/validator-custom-methods.js"></script>
+    <script type="text/javascript" src="/js/validator/uiwidget-validator_zh_CN.js"></script>
+    <style type="text/css">
+        .questions{background:#ededed;}
+        .questions dl{margin-top:.2rem;background:#fff;padding-left:.3rem;padding:.3rem 0 .2rem .3rem;}
+        .questions dl:first-child{margin-top:0rem;}
+        .questions dl dt{font-size:.28rem;color:#333;border-bottom:1px solid #e6e6e6;padding:0 .3rem .2rem 0;}
+        .questions dl dd{font-size:.22rem;color:#666;line-height:.38rem;padding:.1rem .3rem .1rem 0rem;}
+        .loginout{display:block;width:80%;margin:0.8rem auto;line-height:0.8rem;text-align:center;background:#FF1744;color:#fff;font-size:0.25rem;border-radius:0.05rem;}
+    </style>
+       
+
+</head>
+<body id="ydmBody">
+<div class="header">
+    <div id="headerGoBack" class="left"><div class="back"></div></div>
+    <h1>地址管理</h1>
+    <a href="" ><div id="goHomePage" class="right"><div class="goHome"></div></div></a>
+</div>
+<form id="addUserForm" name="addUserForm" action="/offlinem/fenxiang/" method="post">
+    <input type="hidden"id="idname" value="<?php echo $this->idname;?>"></input>
+    <div id="ordersArea">
+        <ul id="orderlist" class="orderlist offline">
+            <?php
+            if($this->list){
+                foreach($this->list as $o){
+                    $name= $o['NAME'];
+                    $telnumber= $o['TELNUMBER'];
+                    $province=$o['PROVINCE'];
+                    $city= $o['CITY'];
+                    $class=$o['CLASS'];
+                    ?>
+                    <li class="li" >
+                        <div id="xiugai" onclick="callbackdata()" order-number="<?php echo $name;?>"      order-numbers="<?php echo $telnumber;?>" order-numberss="<?php echo $province. $city .$class;?>"         >
+                        <div class="oibody">
+                            姓名：    <div id="mername" class="mername">
+                                <div  id="name"  class="name"> <?php echo $name.'&#8194;'.'&#8194;' .$telnumber;?></div>
+
+                            </div>
+
+                        </div>
+                        <div class="oibody">
+                            地址：  <div class="mername">
+                                <div class="name"><?php echo $province. $city .$class;?></div>
+
+                            </div>
+                        </div>
+                        </div>
+                    </li>
+                <?php } }else{ ?>
+                <li class="noresult">
+                    <div class="text">暂无地址信息</div>
+                </li>
+            <?php }?>
+        </ul>
+    </div>
+</form>
+<div class="loginout">
+    <a href="/offlinem/fenxiang/index">新增地址</a>
+</div>
+<input type="hidden" id="name1" value=""/>
+<input type="hidden" id="name2" value=""/>
+<input type="hidden" id="name3" value=""/>
+</body>
+<script type="text/javascript" src="/js/view/partner/common/common.min.js?v=<?php echo v_js;?>"></script>
+
+<script type="text/javascript">
+    $().ready(function() {
+
+        $(document).on('click', '#xiugai', function (result) {
+            var nameq1 = $(this).attr('order-number');
+            var nameq2 = $(this).attr('order-numbers');
+            var nameq3 = $(this).attr('order-numberss');
+            $('#name1').val(nameq1);
+            $('#name2').val(nameq2);
+            $('#name3').val(nameq3);
+            alert('已选择，点击下方确认');
+        });
+
+    });
+
+
+
+
+    var callbackdata = function () {
+        var nameq1 = $('#name1').val();
+        var nameq2 = $('#name2').val();
+        var nameq3 = $('#name3').val();
+        //data里面可以存放很多需要回显的数据，在父页面调用这个function即可拿到data里面的数据达到回显的效果
+        data = {
+            data_name1: nameq1,
+            data_name2: nameq2,
+            data_name3: nameq3,
+        };
+        //function返回一个data值，达到回显数据效果
+        return data;
+    };
+
+
+</script>
+
+
+</html>

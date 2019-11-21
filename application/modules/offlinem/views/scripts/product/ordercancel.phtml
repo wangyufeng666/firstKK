@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta content="width=device-width,minimum-scale=1.0,maximum-scale=1.0" name="viewport" />
+    <meta name="format-detection" content="telephone=no" />
+    <title>订单取消</title>
+    <link type="text/css" rel="stylesheet" href="/css/common/common.min.css?v=<?php echo v_css;?>"/>
+    <link type="text/css" rel="stylesheet" href="/css/common/new0917/common.min.css?v=<?php echo v_css;?>"/>
+    <script type="text/javascript" src="<?php echo IMG01_DOMAIN; ?>/common/jquery-1.11.2.min.js"></script>
+    <style type="text/css">
+        body{background:#fff;}
+        .ydm_header{padding-top:0;height:44px;}
+        .ydm_header .backpage{top:0;}
+        .ydm_container_box{padding-top: 0px;}
+        .list_box .listbox{font-size: 0.34rem;padding: 0 0.5rem;line-height: 1.0rem;border-bottom: 1px solid #F5F5F5;outline-color: #fff;}
+        .list_box .listbox.active{background: url(https://alicdn01.youdemai.com/images/ydmapp/common/icon/icon_typeslected.png)no-repeat 95% center;background-size: 0.5rem;}
+        .outsing{position: fixed;bottom: 0;width: 100%;}
+        .outsing .outsing_inner{line-height: 1.0rem;text-align: center;font-size: 0.32rem;color: #fff;cursor:pointer;}
+        .textar{width: 90%;border: 1px solid #F5F5F5;margin: 0.5rem auto 0;margin-bottom:1.2rem;}
+        .textar textarea{height: 3.0rem;line-height: 0.5rem;font-size: 0.3rem;}
+        .cancel,.stop{cursor:pointer;}
+    </style>
+</head>
+<body>
+<div id="head" class="header">
+    <div id="headerGoBack" class="left"><div class="back"></div></div>
+    <span>订单取消</span>
+    <a href="/offlinem/product/index"><div id="goHomePage" class="right"><div class="goHome"></div></div></a>
+</div>
+<div class="ydm_container_box">
+    <input type="hidden" id="orderNo" name="orderNo" value="<?php echo $this->id ?>" />
+    <div class="list_box">
+        <div class="listbox" tabindex="1">旧机回收估价太低</div>
+        <div class="listbox" tabindex="2">自用或已送人</div>
+        <div class="listbox" tabindex="3">暂无新机可以使用</div>
+        <div class="listbox" tabindex="4">重复订单</div>
+        <div class="listbox" tabindex="5">担心交易风险</div>
+        <div class="listbox active" tabindex="6">其他</div>
+    </div>
+    <div class="textar"><textarea id="othertext" placeholder="留下您的终止的原因和建议，将有机会获得精美小礼物一份哟"></textarea></div>
+    <div class="outsing" id="outsing">
+        <div class="outsing_inner pfb thembg">取消订单</div>
+    </div>
+</div>
+</body>
+
+<script type="text/javascript">
+    var itemArrar = {'1':'旧机回收估价太低','2':'自用或已送人','3':'暂无新机可以使用','4':'重复订单','5':'担心交易风险','6':'其他'};
+    var _index = 6
+    var orderNo=$("#orderNo").val();
+    var PhoneNum=$("#orderNo").attr('Phonenum');
+    $(document).on('click', '.list_box .listbox', function(event) {
+        event.preventDefault();
+        $(this).addClass('active').siblings('.listbox').removeClass('active');
+        _index = $(this).attr('tabindex');
+        if(_index== '6'){
+            $('.textar').removeClass('hide');
+        }else{
+            $('.textar').addClass('hide');
+        }
+    });
+
+    //点击取消订单按钮
+    var _thisTetx = '';
+    $(document).on('click', '.outsing_inner', function(event) {
+        var othertext = $('#othertext').val();
+        var stopText = itemArrar[_index];
+        if(_index == 6){
+            if(othertext == ''){
+                bottomBtm('请输入您取消订单的原因');
+            }else{
+                _thisTetx = stopText+' '+othertext;
+                toStopOrder();
+            }
+        }else{
+            _thisTetx = stopText;
+            toStopOrder();
+        }
+    })
+
+    function toStopOrder(){
+        selectBtm('确认取消此订单','stop','确定','','取消','');
+    }
+
+    $(document).on('click', '.stop', function(event) {
+        console.log('llll');
+        $.ajax({
+            type:'POST'//请求方式
+            ,url:'/offlinem/product/ordercancels'  //请求路径
+            ,data:{orderNo:orderNo}//发送到服务器的数据
+            ,cache:false
+            ,async:true
+            ,timeout:10000
+            ,dataType:'json'
+            ,success:function(data){
+                console.log(data);
+                if(data == 'Y'){
+                    short_tips('订单取消成功');
+                    window.location.href=' /offlinem/product/seeorder';
+
+                }
+            }
+        })
+
+    })
+
+    function backPage(){
+        window.history.go(-1)
+//    window.location.href='/user/center/orderdetail?orderNo='+orderNo;
+
+    }
+    // ios键盘收起不回弹bug 解决方式
+    $("#othertext").on("blur",function(){
+        document.body.scrollTop=5;
+    });
+
+</script>
+<script type="text/javascript" src="/js/view/offlinem/common/common.min.js?v=<?php echo v_js;?>"></script>
+<script type="text/javascript" src="/js/view/offlinem/common/popup.js?v=<?php echo v_js;?>"></script>
+</html>

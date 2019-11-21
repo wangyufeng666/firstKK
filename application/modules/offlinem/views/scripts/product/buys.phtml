@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta content="width=device-width,minimum-scale=1.0,maximum-scale=1.0" name="viewport" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta content="telephone=no" name="format-detection" />
+    <title>回收单提交成功 </title>
+    <link rel="stylesheet" type="text/css" href="/css/common/new0917/common.min.css?v=<?php echo v_css;?>"/>
+    <script type="text/javascript" src="<?php echo IMG01_DOMAIN; ?>/common/jquery-1.11.2.min.js"></script>
+    <style type="text/css">
+        body,.apicloud_main{background: #F5F5F5;}
+        .ydm_container_box{padding-top: 0;}
+        .succ_box .ban_btm{position: relative}
+        .succ_box .ban_btm .price_box{position: absolute;top: 0;left: 5%;width: 90%;}
+        .succ_box .ban_btm .price_box .inn_price{position: relative;padding: 0.3rem 10% 0 10%;}
+        .succ_box .ban_btm .price_box .inn_price .inn_box{position: absolute;top: 0.6rem;left: 0rem;width: 100%;text-align: center;}
+        .succ_box .ban_btm .price_box .inn_price .inn_box .price{font-size: 0.4rem;font-weight: bold;background: #ff1744;-webkit-background-clip: text; color:transparent;}
+        .succ_box .ban_btm .price_box .inn_price .inn_box .tips{font-size: 0.26rem;padding-top: 0.1rem;color: #875940;}
+        .succ_box .ban_btm .price_box .recycle_tips{text-align: center;font-size: 0.26rem;padding-top: 0.3rem;}
+
+        .look_order{width: 92%;margin: 0.45rem auto 0;line-height: 0.8rem;font-size: 0.32rem;text-align: center;color: #fff;border-radius: 0.4rem;}
+        .order_btm_tips{padding-bottom: 0.3rem;}
+        .order_btm_tips .img{width: 30%;margin: 0.5rem auto 0;text-align: center;font-size: 0.36rem;}
+        .order_btm_tips .tip_box{width: 92%;margin: 0.35rem auto 0;color: #999;}
+        .order_btm_tips .tip_box .list{color: #999;padding-bottom: 0.05rem;}
+        .order_btm_tips .tip_box .list.themcolor{color: #D85A57;padding-left: 0.3rem;}
+    </style>
+</head>
+<body ydm-recycle-spm="ydmM07_loading">
+<div id="head" class="header">
+    <a href="/offlinem/product/index"><div class="left"><div class="back"></div></div></a>
+    <span>提交成功</span>
+    <a href="/offlinem/product/index"><div id="goHomePage" class="right"><div class="goHome"></div></div></a>
+</div>
+<div class="ydm_container_box">
+    <div class="succ_box">
+        <div class="ban_top img"><img src="https://alicdn01.youdemai.com/images/ydmapp/order/success/new_order_success.png?v=444" /></div>
+        <div class="ban_btm">
+            <div class="img"><img src="https://alicdn01.youdemai.com/images/ydmapp/order/success/new_order_btm.png?v=444"/></div>
+            <div class="price_box">
+                <div class="inn_price">
+                    <div class="img img"><img src="https://alicdn01.youdemai.com/images/ydmapp/order/success/new_price_bg.png"/></div>
+                    <div class="inn_box">
+                        <div class="price">¥<?php echo $this->jiage; ?>.00</div>
+                        <div class="tips">支付完成</div>
+                        <div class="tips">在我的订单查看</div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <a href="/offlinem/product/seeorders?id=<?php echo $this->ids; ?>"><div class="look_order thembg">查看订单</div></a>
+
+</div>
+</body>
+<script type="text/javascript" src="/js/view/offlinem/common/common.min.js?v=<?php echo v_js;?>"></script>
+
+</html>

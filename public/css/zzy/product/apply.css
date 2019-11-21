@@ -1,0 +1,68 @@
+body{background:#EFEFEF;}
+.swiper-button-prev{background-image:url(/images/zzy/product/left.png);background-size:0.25rem;}
+.swiper-button-next{background-image:url(/images/zzy/product/right.png);background-size:0.25rem;}
+
+.report-conta{margin-bottom:1.35rem;border-bottom:1px solid #ddd;}
+.report-conta>div{background:#fff;}
+.report-conta .select-box{margin-top:0.15rem;border-top:1px solid #ddd;}
+.report-conta .box{padding:0 5%;}
+.report-conta .box ul{border-bottom:1px solid #F5F5F5;}
+.report-conta .box .rent_date{border-bottom:none;}
+.report-conta .box .installment_text{color:#999;line-height:0.25rem;padding:0.2rem 0;border-top:1px solid #F5F5F5;display:none;}
+.rent_question{float:right;color:#0066CC;font-size:0.24rem;line-height:0.8rem;}
+.report-conta .box li{float:left;height:0.7rem;min-width:20%;padding:0 0.1rem;line-height:0.7rem;text-align:center;box-sizing:border-box;border:1px solid #ddd;margin-bottom:0.3rem;border-radius:0.05rem}
+.report-conta .box li:nth-child(2){margin:0 6.66%;}
+.report-conta .box li:nth-child(3){margin-right:6.66%;}
+.report-conta .box li:nth-child(6){margin:0 6.66%;}
+.report-conta .box li.disable{background-color:#e4e4e4;}
+.report-conta .box li .jump-box{display:block;width:100%;height:100%;}
+.report-conta .box .select{padding:0.2rem 0;font-size:0.23rem;}
+.report-conta .box .selected{border:1px solid #ef3030;background:url(/images/zzy/product/selected.png) right bottom no-repeat;background-size:0.2rem;}
+.report-conta .pay_way{margin-top:0.15rem;border:solid #ddd;border-width:1px 0px 1px 0px;padding-bottom:0.2rem;}
+.report-conta .pay_way li{width:25%;}
+.report-conta .delivery{border-bottom:1px solid #ddd;}
+.report-conta .payway_text{color:#999;line-height:0.25rem;margin-top:0.2rem;}
+.report-conta .bornone{padding:0.2rem 0;}
+.report-conta .img{float:left;width:30%;}
+.report-conta .rent_price{float:left;width:70%;}
+.report-conta .rent_price .rent_money{font-size:0.36rem;margin-bottom:0.1rem;}
+.report-conta .rent_price .rent_new_machine{padding-left:0.15rem;border-left:3px solid #FB4F85;font-size:0.25rem;color:#363636;font-weight:bold;}
+.report-conta .rent_price .rent_new_machine span{color:#F86F9C;padding-left:0.5rem;}
+.report-conta .rent_price .suggest_price{padding-top:0.2rem;}
+.report-conta .rent_price .suggest_price input{width:60%;line-height:0.4rem;text-align:center;padding:0.2rem;font-size:0.36rem;color:#666;border-bottom:1px solid #ddd;}
+.report-conta .rent_price .suggest_price .clickSave{background:#3B88FF;color:#fff;padding:0.13rem 0.3rem;border-radius:3px;}
+  ::-webkit-input-placeholder{color:#ddd !important;}
+  ::-moz-placeholder{color:#ddd !important;}
+  :-moz-placeholder{color:#ddd !important;}
+  :-ms-input-placeholder{color:#ddd !important;}
+
+.report-conta .rent_price .rent_money span{color:#FF0000;margin:0 0.1rem;}
+.swiper-pagination{position:absolute;left:80%;bottom:.1rem;background:rgba(0,0,0,.2);width:0.7rem;height:0.3rem;line-height:0.3rem;border-radius:0.2rem;color:#fff;text-align:center;z-index:2}
+
+.about_service{padding:0.2rem 5%;border-bottom:1px solid #ddd;border-top:1px solid #ddd;}
+.about_service .icon_text{float:left;height:0.5rem;line-height:0.5rem;font-size:0.3rem;padding-left:0.5rem;background:url(/images/zzy/product/header_icon.png)no-repeat left center;background-size:0.3rem;}
+.about_service .right_step{float:right;width:0.2rem;height:0.2rem;margin-top:0.15rem;border:solid #7b7b7b;border-width:0 2px 2px 0;-webkit-transform:rotate(-45deg);-moz-transform:rotate(-45deg);-ms-transform:rotate(-45deg);-o-transform:rotate(-45deg);transform:rotate(-45deg);}
+
+.btn-submit{position:fixed;width:100%;max-width:640px;text-align:center;padding:0.1rem 0  0.13rem 0;bottom:0px;background:#fff;border-top:1px solid #ddd;}
+.btn-submit .has-selected{float:left;width:15%;text-align:center;margin-left:0.1rem;padding-top:0.1rem;}
+.btn-submit .has-selected img{vertical-align:middle;border:1px solid #ddd;padding:0.05rem;border-radius:0.05rem;}
+.btn-submit .has_break{float:left;width:45%;text-align:left;margin-left:0.1rem;padding-top:0.15rem;}
+.btn-submit .has_break .totle{height:0.5rem;line-height:0.5rem;font-size:0.23rem;color:#C5514B;}
+.btn-submit .has_break span{font-size:0.22rem;}
+.btn-submit .has_break .select-version{color:#F97831;font-size:0.25rem;margin-right:0.2rem;}
+.btn-submit .has_break .select-money{color:#999;margin-left:0.1rem;}
+.btn-submit .to-apply{float:right;display:inline-block;width:30%;padding:0.18rem 0.4rem;margin:0.08rem 0.3rem 0 0 ;color:#FFFFFF;border-radius:0.1rem;font-size:0.3rem;box-sizing:border-box;}
+.btn-submit .able{background:#ef3030;}
+.btn-submit .disable{background:#e4e4e4;}
+/*.btn-submit .enable{background:#ddd;}*/
+
+/*弹窗公用*/
+.tips_box{position:fixed;width:80%;left:10%;background:#fff;z-index:999999;border-radius:0.1rem;}
+.tips_box .tips_text{padding:0.7rem 0.3rem 0.5rem;text-align:center;font-size:0.3rem;}
+.tips_box .tips_yes{width:2.0rem;margin:0 auto;margin-bottom:0.4rem;text-align:center;background:#FF1744;color:#fff;border-radius:0.1rem;line-height:0.7rem;font-size:0.24rem;}
+.tips_box .order{width:3.0rem;margin:0 auto;text-align:center;color:#fff;line-height:0.7rem;font-size:0.24rem;padding-bottom:0.2rem;}
+.tips_box .order .left{float:left;width:1.2rem;margin-right:0.2rem;background:#FF1744;border-radius:0.1rem;}
+.tips_box .order .right{float:right;width:1.2rem;margin-left:0.2rem;background:#FF1744;border-radius:0.1rem;}
+.tips_box .tips_close{float:right;position:absolute;top:.15rem;right:.1rem;display:inline-block;width:.3rem;height:.3rem;background:url(/images/zzy/img/cls_btn.png) no-repeat;background-size:.25rem;}
+.slide-mask{position:fixed;z-index:8;left:0;top:0;bottom:0;width:100%;height:100%;background:rgba(0, 0, 0, 0.4);-webkit-transition:all 0.3s ease-out;
+transition:all 0.3s ease-out;display:none;transform-origin:0px 0px 0px;opacity:1;transform:scale(1, 1);z-index: 999999;}

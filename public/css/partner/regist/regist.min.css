@@ -1,0 +1,7 @@
+.container .wt-area .wt-box .wt-title{padding-left:0.8rem;line-height:.8rem;font-size:.3rem;color:#666666;background:#f3f3f3 url(/images/login/login_user.png) no-repeat .2rem center;background-size: 0.4rem;}
+.container .wt-area .wt-box .wt-items{padding: 0 0.3rem;}
+.container .wt-area .wt-box .wt-items .wt-item{background:#fff;border-bottom:1px solid #dedede;padding:.2rem;height:1rem;line-height:.6rem;font-size:.24rem;color:#666666;}
+.container .wt-area .wt-box .wt-items .wt-item:last-child{border-bottom: 0;}
+.container .wt-area .wt-box .wt-items .wt-item .label{display:inline-block;width:1.4rem;}
+.container .wt-area .wt-box .wt-items .wt-item .text{width:3rem;font-size:.24rem;color:#666;}
+#personbox .label{width: 1.8rem;}

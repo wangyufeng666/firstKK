@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <meta content="width=device-width, height=device-height, minimum-scale=1, maximum-scale=1" name="viewport" />
+    <meta name="format-detection" content="telephone=no, email=no"/>
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <title>个人信息</title>
+    <meta name="keywords" content="线下,线下系统,线下以旧换新,线下系统以旧换新"/>
+    <meta name="description" content="线下,线下系统,线下以旧换新,线下系统以旧换新"/>
+    <link type="text/css" rel="stylesheet" href="/css/common/common.min.css?v=<?php echo v_css;?>"/>
+    <link type="text/css" rel="stylesheet" href="/css/offlinem/product/searchindex.min.css?v=<?php echo v_css;?>"/>
+    <script type="text/javascript" src="/js/jquery-1.8.2.min.js"></script>
+</head>
+<style>
+    body{background:#f5f5f5;}
+    .top{padding: 0.6rem 0.2rem;border-bottom:1px solid #ddd;background:url()no-repeat top left;background-size: 7.0rem;}
+    .top .picture{float: left;width: 1rem;}
+    .top .picture img{width: 1.0rem;border-radius: 0.5rem;}
+    .top .info{float: left;padding-left: 0.2rem;width: 5rem;background-size: 0.3rem;}
+    .top .info .store_name{color: #fff;font-size: 0.22rem;font-weight: bold;padding: 0.15rem 0;}
+    .top .info .text{color: #ddd;}
+    .info_head{padding: 0.2rem;background: #fff;border-bottom: 1px solid #ddd;margin-top: 0.2rem;}
+    .info_head div{font-size: 0.26rem;padding-left: 0.1rem;border-left: 0.05rem solid #FF1744;font-weight: bold;}
+    .list_box{background: #fff;padding: 0.1rem 0.2rem 0 0.4rem;}
+    .list_box .all{padding:.3rem 0;;border-bottom:1px solid #f5f5f5;font-size:.22rem;color: #363636;}
+    .list_box .all span{font-weight: bold;padding-left: 0.4rem;}
+</style>
+<body>
+<?php
+foreach ($this->list as    $k=>$o)
+{
+    $id= $o['ID'];
+    $pinlei= $o['PINLEI'];
+    $pinpai=$o['PINPAI'];
+    $yanse= $o['YANSE'];
+    $neicun=$o['NEICUN'];
+    $images=$o['IMAGE'];
+    $jiage=$o['JIAGE'];
+    $putway=$o['PUTWAY'];
+}
+
+?>
+<div id="ydmBody" class="container">
+    <form action="/offlinem/production/orders" method="post">
+        <div class="list_box">
+            <div class="all">品类：<select id="pinlei"> <option>请选择</option>  <option value="手机">手机</option>  <option value="电脑">电脑</option>   </select></select> </div>
+            <div class="all">品牌：<input id="pinpai" type="text" required="required" value="<?php echo $pinpai;?>"style=' text-align:center'/> </div>
+            <div class="all">颜色:<input id="yanse" type="text" value="<?php echo $yanse;?>" style=' text-align:center'/> </div>
+            <div class="all">内存:<input id="neicun" type="text" value="<?php echo $neicun;?>" style=' text-align:center'/> </div>
+<!--            <div class="all">排序:<input id="id" type="text" value="--><?php //echo $id;?><!--" /> </div>-->
+            <input id="id" type="hidden" value="<?php echo $id;?>" />
+            <div class="all">价格:<input id="jiage" type="text" value="<?php echo $jiage;?>" style=' text-align:center'/> </div>
+            <div class="all" id="btn_submits" style=' text-align:center'>修改
+            </div>
+        </div>
+    </form>
+
+</body>
+<script type="text/javascript" src="/js/view/partner/common/common.min.js?v=<?php echo v_js;?>"></script>
+<script type="text/javascript">
+    $().ready(function(){
+        $('#pinlei').val('<?php echo $pinlei;?>');
+        $('#btn_submits').click(function(){
+            var params={};
+            params.id=$('#id').val();
+            params.pinlei = $('#pinlei').val();
+            params.pinpai = $('#pinpai').val();
+            params.yanse = $('#yanse').val();
+            params.neicun = $('#neicun').val();
+            params.jiage=$('#jiage').val();
+            $.post('/offlinem/product/xiugai', params, function(result) {
+                if(result=="Y") {
+                    alert('成功');
+                    window.location.href = '/offlinem/product/xiangqing'
+                }
+                else {
+                    alert('失败');
+                }
+            });
+
+        });
+
+
+    })
+</script>
+</html>

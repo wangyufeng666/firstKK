@@ -1,0 +1,12 @@
+DIV.growlUI {
+	BACKGROUND: url(/images/info.gif) no-repeat 10px 10px;
+}
+DIV.growlUI H2 {
+	TEXT-ALIGN: left; PADDING-BOTTOM: 5px; PADDING-LEFT: 70px; PADDING-RIGHT: 5px; COLOR: white; PADDING-TOP: 5px
+}
+DIV.growlUI H3 {
+	TEXT-ALIGN: left; PADDING-BOTTOM: 5px; PADDING-LEFT: 70px; PADDING-RIGHT: 5px; COLOR: white; PADDING-TOP: 5px
+}
+DIV.growlUI H2 {
+	FONT-SIZE: 13px
+}

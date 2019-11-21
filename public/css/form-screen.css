@@ -1,0 +1,77 @@
+body{min-width:1000px;}
+/*table*/
+.table-2column, .table-4column, .table-6column, .table-8column{clear:both;color:#3E3E3E;}
+.table-2column tr, .table-4column tr, .table-6column tr, .table-8column tr, .searchbox8 tr{height:35px;}
+.table-2column th, .table-4column th, .table-6column th, .table-8column th, .searchbox8 th{text-align:right;font-size:12px;font-weight:normal;}
+.searchbox8 th{font-weight:normal;width:80px;}
+.table-2column td, .table-4column td, .table-6column td, .table-8column td, .searchbox8 td{text-align:left;word-break:break-all;word-wrap:break-word;}
+/*2/4列表单适用*/
+.table-2column th{width:30%;}
+.table-2column td{width:70%;}
+/*4列表单适用*/
+.table-4column th{width:20%;}
+.table-4column td{width:30%;}
+/*6列表单适用*/
+.table-6column th{width:13%;}
+.table-6column td{width:20%;}
+/*8列表单适用*/
+.table-8column th{width:10%;}
+.table-8column td{width:15%;}
+/*以下内容适用于表单输入组件*/
+input,select,textarea{vertical-align:middle;}
+label{cursor:pointer;}
+/*文本框一般样式*/
+input {height:22px;font-size:13px;text-indent:3px;}
+.input-common {border:1px solid #878787;background-color:#ffffff;height:16px;padding:3px 2px 1px 2px;}
+/**文本框通用长度**/
+/*1-10个汉字*/
+.input-word-2{width:35px;}
+.input-word-6{width:60px;}
+.input-word-tab{width:160px;}
+/*日期*/
+.input-date{width:80px;border-radius:3px;border:1px solid #bfbfbf;}
+/*时间（HH:MM:SS）、电话号码区号（4位）*/
+.input-tc{width:50px;}
+/*电话号码（8位）*/
+.input-telephone{width:70px;}
+input[type=text],textarea,input[type=password] {border:solid 1px #bfbfbf;padding:3px 5px;border-radius:2px;line-height:20px;color:#000;vertical-align:middle;}
+select {border:solid 1px #ccc;border-radius:2px;color:#000;vertical-align:middle;padding:5px;min-width:100px;height:30px;}
+select.select-word-6{width:80px;min-width:50px;}
+select.select-word-8{width:100px;}
+select.select-word-10{width:120px;}
+select.select-word-15{width:150px;}
+select.select-word-20{width:170px;}
+/**文本框特殊长度**/
+input.input-word-5 {width:75px;border-radius:3px;border:1px solid #bfbfbf;}
+input.input-word-8 {width:100px;border-radius:3px;border:1px solid #bfbfbf;}
+input.input-word-10{width:135px;border-radius:3px;border:1px solid #bfbfbf;}
+input.input-word-15{width:205px;border-radius:3px;border:1px solid #bfbfbf;}
+input.input-word-20{width:270px;border-radius:3px;border:1px solid #bfbfbf;}
+input.input-word-30{width:400px;border-radius:3px;border:1px solid #bfbfbf;}
+table span{padding:1px 1px 1px 1px;}
+.require{padding-left:5px;background-image:url(/images/img_formRequired.gif);background-repeat:no-repeat;background-position:left center;}
+.no_require{padding-left:5px;}
+.input-disable {background:#FAFAFA;cursor:wait;}
+input.btn_form{padding:3px 10px 5px 10px;height:30px;line-height:30px;font-size:18px;font-family:"Arial","Tahoma","微软雅黑","雅黑";}
+.button {display:inline-block;zoom:1;vertical-align:baseline;outline:none;cursor:pointer;border:0;
+text-align:center;font-size:14px;line-height:15px;font-weight:bold;padding:8px 20px;border-radius:4px;margin:2px 5px;}
+.button:active {position:relative;top:1px;}
+.button.btn_white {color:#606060;background:#fff;}
+.button.btn_orange {color:#fef4e9;background:#f78d1d;}
+.button.btn_gray {color:#e9e9e9;background:#6e6e6e;}
+.button.btn_blue {color:#ffffff;background:#0095cd;}
+.button.btn_rosy {color:#ffffff;background:#da5867;}
+.ydm_p10{padding:10px;}
+.ydm-ml10{margin-left:10px;}
+.ydm_ml20{margin-left:20px;}
+.ydm_ml40{margin-left:40px;}
+/*2017-5-12/zhuhaili(*/
+.button.btn_red {background: #D3B91A;color: #ffffff;}
+.titletops{width:100%;overflow:hidden;}
+.titletops .title_so{float:left;width:auto;margin:0px 10px 5px 0px;padding-top:5px;}
+.titletops .title_solast{margin-top:-3px;}
+/*)*/
+.green{color:green;}
+.red{color:red;}
+.blue{color:blue;}
+.btnArea{margin:0 auto;}

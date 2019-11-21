@@ -1,0 +1,36 @@
+body{background: #F6F6F6;}
+.header h1{font-size: 0.26rem;}
+h1 span{display: inline-block;margin: 0 0.35rem;box-sizing: border-box;height: 0.88rem;line-height: 0.88rem;padding: 0 0.1rem;}
+h1 span.active{border-bottom: 0.05rem solid #fff;}
+.dark{color: #999;margin-right: 0.2rem;}
+.red{color: #FF0000;}
+.common{margin-top: 0.15rem;padding: 0 7%;border-bottom: 1px solid #ddd;background: #fff;}
+.common ul{padding: 0.15rem 0;border-bottom: 1px solid #F5F5F5;}
+.common .width_full{padding: 0.1rem 0;}
+.common .border_none{border-bottom: none;}
+.border_right{border-right: 1px solid #F5F5F5;;}
+.common .fixed_width{display: inline-block;width: 0.9rem;text-align: left;}
+.common i{display: inline-block;width: 0.2rem;height: 0.2rem;margin-left: 0.2rem;border: solid #5D5D5D;border-width: 0 1px 1px 0;-webkit-transform: rotate(45deg);-moz-transform: rotate(45deg);-ms-transform: rotate(45deg);-o-transform: rotate(45deg);transform: rotate(45deg);}
+.common .float_rs{float: right;}
+.common .float_rs span{display: inline-block;padding-left: 0.3rem;}
+.common .float_rs img{width: 1.5rem;}
+
+.merinfo_container>div{display: none;}
+.merinfo_container .show{display: block;opacity: 100;}
+.rent_info .mer_banner img{width: 100%;}
+.rent_info .about_rent{line-height: 0.6rem;}
+.rent_info .about_rent li{float: left;width: 50%;}
+.rent_info .about_rent li:nth-child(2n){text-align: right;border-right: none;}
+.rent_info .about_rent li:nth-child(2n) .fixed_width{text-align: right;}
+.about_rent .conf_name{display: inline-block;min-width: 0.7rem;}
+/*.rent_info .about_rent li:nth-child(2n) span:last-child{display: inline-block;width: 1.5rem;}*/
+.rent_info .about_rent li:last-child{border-right: none;}
+.rent_info .about_rent span{font-size: 0.22rem;}
+.rent_info .configure li{margin: 0.05rem 0;}
+
+.event_div{padding: 0 5%;margin: 0.35rem 0 0.5rem 0;}
+.event_div .next{height: 0.8rem;line-height: 0.8rem;text-align: center;color: #fff;background: #ef3030;border-radius: 0.05rem;font-size:.26rem;}
+
+.slideMask {display: none;position: fixed;width: 100%;height: 100%;top: 0rem;left: 0;background-color: rgba(0,0,0,0.7);z-index:9999999;}
+.slideMask img{width:100%;}
+

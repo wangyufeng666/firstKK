@@ -1,0 +1,16 @@
+.report-conta{margin-bottom: 1.5rem;max-width: 640px;}
+.pay_date{padding: 0.2rem;border-bottom: 1px solid #ddd;}
+.pay_date div{float: left;width: 50%;box-sizing: content-box;height: 0.8rem;line-height: 0.8rem;font-size: 0.25rem;}
+.pay_date .narrow{width: 30%;}
+.pay_date .width{width: 70%;}
+.pay_date .pay{text-align: right;color: #DA3A4C;font-weight: bold;}
+.pay_date .day{text-align: right;color: #333333;font-weight: bold;}
+.pay_date .cycle,.pay_date .credit-logo{text-align: right;}
+.pay_date .cycle,.pay_date .credit-logo img{vertical-align: middle;}
+.method{text-align: right;line-height: 0.8rem;padding: 0.2rem;font-size: 0.25rem;padding-left: 0.2rem;border-bottom: 1px solid #ddd;}
+.method span{font-size: x-small;}
+.method-explain{line-height: 0.4rem;padding: 0.2rem;border-bottom: 1px solid #ddd;font-size: .22rem;}
+.go-submit{position: fixed;bottom: 0;height: 45px;width: 100%;max-width: 640px;line-height: 45px;text-align: center;margin-top: 0.3rem;background: #DA3A4C;color: #fff;font-size: 0.3rem;font-weight: bold;}
+.go-submit img{vertical-align: middle;margin-left: 0.3rem;}
+.go-submit #time{margin-left: 0.2rem;}
+.submit-disable{background: #DDDDDD;}

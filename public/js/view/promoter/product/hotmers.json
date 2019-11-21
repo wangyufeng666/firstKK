@@ -1,0 +1,44 @@
+{"sorts":[
+    {"name":"手机","mertype":"J","hotmers":[
+      {"name":"iphone6","imgPath":"/images/thumbs/mobilephone/apple/iphone6_g/front.jpg","price":"2500","merId":"077A69B7DCFEDC7FE050007F01005199"},
+      {"name":"Galaxy note3 ","imgPath":"/images/thumbs/mobilephone/samsung/galaxynote3n9008s/front.jpg","price":"675","merId":"097043F6FBB69BB2E050007F01006528"},
+      {"name":"荣耀6plus","imgPath":"/images/thumbs/mobilephone/huawei/ry6plus/front.jpg","price":"410","merId":"16BA79E3B374DB97E050840A65083D49"},
+      {"name":"乐Pro3","imgPath":"/images/thumbs/mobilephone/letv/le pro3/front.jpg","price":"1300","merId":"3ECDEC7390EFA838E050840A65085222"}
+    ]},
+    {"name":"平板","mertype":"K","hotmers":[
+      {"name":"iPad air","imgPath":"/images/thumbs/tabletpc/apple/ipadair/front.jpg","price":"1500","merId":"0790932D4CCD4BE8E050007F01002271"},
+      {"name":"iPad mini2","imgPath":"/images/thumbs/tabletpc/apple/ipadmini2/front.jpg","price":"1250","merId":"0790932D4CD24BE8E050007F01002271"},
+      {"name":"MacBook Pro 13 i5五代","imgPath":"/images/thumbs/notebook/apple/macbook pro 13/front.jpg","price":"7000","merId":"420602E49BE483F4E050840A65083013"},
+      {"name":"XPS 13（9350）","imgPath":"/images/thumbs/notebook/dell/9350/front.jpg","price":"6000","merId":"3227145FA6B0200AE050840A65087646"}
+    ]},
+    {"name":"机身","mertype":"A","hotmers":[
+      {"name":"佳能5Ds R","imgPath":"/images/thumbs/jishen/canon/5ds r/front.jpg","price":"16800","merId":"19803643A86AF724E050A00A451A442A"},
+      {"name":"佳能 EF 24mm f1.4 L II USM","imgPath":"/images/thumbs/jingtou/canon/ef 24mm f1.4 l ii usm/front.jpg","price":"6500","merId":"DB3C17D933A607D1E040007F01001E93"},
+      {"name":"尼康 DX 18-300mm f3.5-6.3G ED VR","imgPath":"/images/thumbs/jingtou/nikon/dx 18-300mm f3.5-6.3g ed vr/front.jpg","price":"2800","merId":"19803643A8CEF724E050A00A451A442A"},
+      {"name":"佳能 760D(18-55)","imgPath":"/images/thumbs/taoji/canon/760d(18-55)/front.jpg","price":"3500","merId":"19A0361BDA9AC92DE050A00A451A16A1"}
+    ]},
+    {"name":"电脑配件","mertype":"V","hotmers":[
+      {"name":"Intel i7 5960K","imgPath":"/images/index/hotmer/intel5960K.jpg","price":"2300","merId":"3A403B25EF640097E050A00A451A0522"},
+      {"name":"三星 1T 2.5寸固态硬盘","imgPath":"/images/index/hotmer/samsung 1T2.5.jpg","price":"800","merId":"3A403B25EF990097E050A00A451A0522"},
+      {"name":"金士顿 DDR3 8GB 内存条","imgPath":"/images/index/hotmer/kingstonDDR38GB.jpg","price":"100","merId":"3A403B25EFAC0097E050A00A451A0522"},
+      {"name":"金士顿 500G/512G 2.5寸固态硬盘","imgPath":"/images/index/hotmer/kingston500g2.5.jpg","price":"350","merId":"3A403B25EF890097E050A00A451A0522"}
+    ]},
+    {"name":"智能设备","mertype":"CD","hotmers":[
+      {"name":"Beats Solo系列","imgPath":"/images/index/hotmer/BeatsSolo.jpg","price":"220","merId":"4B4BD4659E3936BBE050840A65085C76"},
+      {"name":"Apple Watch 38mm国行 Series 1运动版","imgPath":"/images/index/hotmer/AppleWatch38mmSeries1.jpg","price":"665","merId":"4B34A659F63C2B36E050840A650867EE"},
+      {"name":"华为 B2","imgPath":"/images/index/hotmer/huaweiB2.jpg","price":"95","merId":"4B4C423C0071AAB3E050840A6508565A"},
+      {"name":"iPod Touch 6代","imgPath":"/images/index/hotmer/iPodTouch6.jpg","price":"750","merId":"4B722CEA5201AEC9E050840A65081120"}
+    ]},
+    {"name":"大家电","mertype":"P","hotmers":[
+      {"name":"大金 柜机 5匹以上（5P以上）","imgPath":"/images/thumbs/aircon/daikin/floor5p+/front.jpg","price":"1650","merId":"081B575F9D3192F2E050007F01004B86"},
+      {"name":"三星 150-250升 双门冰箱","imgPath":"/images/thumbs/icebox/samsung/double/front.jpg","price":"1300","merId":"0ACCF80EBC3D1B51E050007F01001D39"},
+      {"name":"海尔 5公斤以上 波轮洗衣机","imgPath":"/images/thumbs/washer/haier/pulsator/front.jpg","price":"15","merId":"0D3C095F4B89619CE050840A6508796F"},
+      {"name":"索尼 32英寸 液晶电视机","imgPath":"/images/thumbs/television/sony/lcd/front.jpg","price":"400","merId":"0ACCF80EBD581B51E050007F01001D39"}
+    ]},
+    {"name":"奢侈品","mertype":"WB","hotmers":[
+      {"name":"香奈儿 2.55口盖包","imgPath":"/images/thumbs/bag/chanel/255/front.jpg","price":"15000","merId":"503FBBC4F1D7EDF3E050840A65085E95"},
+      {"name":"菲拉格慕 Gancio锁扣单肩包","imgPath":"/images/thumbs/bag/ferragamo/gancio/front.jpg","price":"6000","merId":"5040591A177AE97BE050840A650867FD"},
+      {"name":"劳力士 潜航者","imgPath":"/images/thumbs/lwatch/rolex/submariner/front.jpg","price":"45000","merId":"50418D5BB19AA96DE050840A65086DDE"},
+      {"name":"宝格丽 B.zero1","imgPath":"/images/thumbs/jewel/bvlgari/bzero1/front.jpg","price":"5000","merId":"5041D9F50828C4C4E050840A65083234"}
+    ]}
+]}

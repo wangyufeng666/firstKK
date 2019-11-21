@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="minimal-ui,width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="format-detection" content="telephone=no">
+    <meta http-equiv="x-rim-auto-match" content="none">
+    <title>购买商品</title>
+    <meta name="keywords" content="线下,线下系统,线下以旧换新,线下系统以旧换新"/>
+    <meta name="description" content="线下,线下系统,线下以旧换新,线下系统以旧换新"/>
+    <link type="text/css" rel="stylesheet" href="/css/common/common.min.css?v=<?php echo v_css;?>"/>
+    <link rel="stylesheet" type="text/css" href="/css/common/new0917/common.min.css?v=<?php echo v_css;?>"/>
+    <link rel="stylesheet" type="text/css" href="/css/offlinem/trade/orders.min.css?v=<?php echo v_css;?>"/>
+    <script type="text/javascript" src="<?php echo IMG01_DOMAIN; ?>/common/jquery-1.11.2.min.js"></script>
+    <script type="text/javascript" src="/js/jquery-1.8.2.min.js"></script>
+    <style type="text/css">
+
+        .xiugai{float: right;
+            margin-right: 0.2rem;}
+        .shanchu{float:right;
+            margin-right: 0.2rem;
+        }
+        .xiugais{
+            float:right;
+            margin-right: 0.2rem;
+        }
+        .questions{background:#ededed;}
+        .questions dl{margin-top:.2rem;background:#fff;padding-left:.3rem;padding:.3rem 0 .2rem .3rem;}
+        .questions dl:first-child{margin-top:0rem;}
+        .questions dl dt{font-size:.28rem;color:#333;border-bottom:1px solid #e6e6e6;padding:0 .3rem .2rem 0;}
+        .questions dl dd{font-size:.22rem;color:#666;line-height:.38rem;padding:.1rem .3rem .1rem 0rem;}
+        .loginout{display:block;width:80%;margin:0.8rem auto;line-height:0.8rem;text-align:center;background:#FF1744;color:#fff;font-size:0.25rem;border-radius:0.05rem;}
+    </style>
+</head>
+<body id="ydmBody">
+<div class="header">
+    <div id="headerGoBack" class="left"><div class="back"></div></div>
+    <h1>购买商品</h1>
+    <a href="" ><div id="goHomePage" class="right"><div class="goHome"></div></div></a>
+</div>
+<form id="addUserForm" name="addUserForm" action="/offlinem/fenxiang/" method="post">
+    <div id="ordersArea">
+        <ul id="orderlist" class="orderlist offline">
+            <?php
+            if($this->list){
+            foreach($this->list as $k=>$o){
+            $name= $o['ID'];
+            $telnumber= $o['PINLEI'];
+            $province=$o['PINPAI'];
+            $city= $o['YANSE'];
+            $class=$o['NEICUN'];
+            $image=$o['IMAGE'];
+            $jiage=$o['JIAGE'];
+            $putway=$o['PUTWAY'];
+            $state=$o['STATE'];
+            $zanwu='/images/common/暂无图片.jpg';
+            ?>
+            <li class="li" >
+                <div class="oibody">
+                    <div id="mername" class="mername">
+                        <div><img style="width: 60px;height: 60px;float: right" src="<?php if($image){ echo $image; }else{ echo $zanwu;   }       ?>" /></div>
+                        <div  id="name"  class="name"> <?php echo $name.'&#8194;'.'&#8194;' .$telnumber.'('.$province.')';?></div>
+
+                    </div>
+    </div>
+    <div class="oibody">
+        <div class="mername">
+            <div class="name"><?php  echo  $city.'-' .$class.'-'.$jiage.'元'?></div>
+
+            <div id="shanchu"
+                 class="shanchu" orders-numberss='<?php echo $name;?>' >
+
+                <?php
+                if($state=='已购买'){
+                    echo '已购买，等待商家发货';
+
+                }else{
+
+                    echo  '去购买';
+                }
+
+                ?>
+
+            </div>
+
+
+        </div>
+
+    </li>
+    <?php } }else{ ?>
+        <li class="noresult">
+            <div class="text">暂无商品信息</div><input type="hidden" id="mertype"><?php echo $this->mertype;    ?><input>
+        </li>
+    <?php }?>
+    </ul>
+    </div>
+</form>
+</body>
+<script type="text/javascript" src="/js/view/partner/common/common.min.js?v=<?php echo v_js;?>"></script>
+
+<script type="text/javascript">
+    $().ready(function() {
+        $(document).on('click', '#shanchu', function (result) {
+            var nameq = $(this).attr('orders-numberss');
+             var mertype=$('#mertype').val();
+
+                $.post('/offlinem/product/buy', {id: nameq}, function (result) {
+
+                        window.location.href = '/offlinem/product/buy?id='+nameq;
+
+                });
+
+
+        });
+
+    });
+</script>
+
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="minimal-ui,width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <title>旧机回收</title>
+    <link rel="stylesheet" href="<?php echo IMG01_DOMAIN; ?>/common/swiper4.5.0/swiper.min.css">
+    <link type="text/css" rel="stylesheet" href="/css/common/new0917/common.min.css?v=<?php echo v_css;?>"/>
+    <link type="text/css" rel="stylesheet" href="/css/promoter/product/index.css?v=190927<?php echo v_css;?>"/>
+    <script type="text/javascript" src="<?php echo IMG01_DOMAIN; ?>/common/jquery-1.11.2.min.js"></script>
+    <script src="<?php echo IMG01_DOMAIN; ?>/common/swiper4.5.0/swiper.min.js" type="text/javascript" charset="utf-8"></script>
+</head>
+<style type="text/css">
+    #xunjia{
+        height: 20px;width: 50px;
+margin: auto auto;
+    }
+</style>
+
+<body >
+
+<?php  $target=$this->target;
+$i=0;
+foreach ($target as $v){
+  $kk= $v['RULETYPENAME'];
+$i++;
+?>
+    <div id="guizes" order-number='<?php echo $kk;?>' ><p id="reds"><?php echo $i.$kkk=$kk."<br>";?></p>
+<select id="guizess">
+    <option >  请选择 <?php echo $kk;?>   </option>
+    <?php         foreach ($v['DETAILS'] as $k=>$v){
+
+
+        echo '<option value="">'.$v['RULEDETAILNAME'].'</option>';
+
+    }?>
+    </select>
+
+    </div>
+
+    <?php
+
+} ?>
+<div id="xunjia" onclick="xunjia()"><p style="background: #CC0000" >询价</p></div>
+</body>
+<script type="text/javascript" src="/js/view/offlinem/common/common.min.js?v=<?php echo v_js;?>"></script>
+</html>

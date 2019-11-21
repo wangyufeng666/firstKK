@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="minimal-ui,width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta name="format-detection" content="telephone=no">
+    <meta http-equiv="x-rim-auto-match" content="none">
+    <title>我的订单</title>
+    <meta name="keywords" content="线下,线下系统,线下以旧换新,线下系统以旧换新"/>
+    <meta name="description" content="线下,线下系统,线下以旧换新,线下系统以旧换新"/>
+    <link rel="stylesheet" type="text/css" href="/css/common/new0917/common.min.css?v=<?php echo v_css;?>"/>
+    <link rel="stylesheet" type="text/css" href="/css/offlinem/trade/orders.min.css?v=<?php echo v_css;?>"/>
+    <script type="text/javascript" src="<?php echo IMG01_DOMAIN; ?>/common/jquery-1.11.2.min.js"></script>
+</head>
+<body>
+<div id="head" class="header">
+    <div id="headerGoBack" class="left"><div class="back"></div></div>
+    <span>我的订单</span>
+    <a href="/offlinem/product/index"><div id="goHomePage" class="right"><div class="goHome"></div></div></a>
+</div>
+<div class="gome_offline_contain">
+    <div id="orderbox">
+        <div id="ordersArea">
+            <ul id="orderlist" class="orderlist offline">
+                <?php
+                if($this->list){
+                    foreach($this->list as $k=>$o){
+
+                        ?>
+                        <li class="li" orderNo = "<?php echo $o['ID'] ;?>">
+                            <div class="oitop">
+                                <span class="tradetype">下单时间：<?php echo $o['SHIJIAN'];?></span>
+                                <span class="orderstatus"><?php echo $o['STATE'];?></span>
+                            </div>
+                            <div class="oibody">
+                                <div class="img"><img src="<?php echo $o['IMAGE'];?>"/></div>
+                                <div class="mername">
+                                    <div class="name"><?php echo $o['PINPAI'];?></div>
+                                    <div class="orice"><?php echo '成交金额：¥'.$o['JIAGE'];?></div>
+
+                                </div>
+                            </div>
+                        </li>
+                    <?php } }else{ ?>
+                    <li class="noresult">
+                        <div class="text">暂无信息</div>
+                    </li>
+                <?php }?>
+            </ul>
+        </div>
+    </div>
+</div>
+</body>
+<script type="text/javascript" src="/js/view/offlinem/common/common.min.js?v=<?php echo v_js;?>"></script>
+<script type="text/javascript">
+$().ready(function(){
+    $("li").click(function () {
+     var ids=$(this).attr('orderNo');
+window.location.href='/offlinem/product/seeorders?id='+ids;
+     });
+})
+</script>
+</html>

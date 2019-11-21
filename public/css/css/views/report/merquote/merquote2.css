@@ -1,0 +1,15 @@
+@CHARSET "UTF-8";
+.z_top{width:1250px;height:50px;overflow:hidden;border:0px solid red;}
+.sub-title{width:1050px;float:left;}
+#btn_export{float:right;margin-top:20px;height:30px;}
+
+.add_td {color:#0000ff;cursor:pointer;}
+.exporttable{clear:both;width:1250px;border-top:1px solid #ccc;border-right:1px solid #ccc;margin-top:20px;background:#fff;}
+.exporttable th{background:#8EF5FA;}
+.exporttable th,.exporttable td{text-align:left;border:1px solid #ccc;border-top:none;border-right:none;padding:0px 3px;overflow:hidden;}
+.exporttable .input_t{width:93%;border:none;outline: none;background:#fff;}
+
+.td_span,.th_span{display:inline-block;width:114px;border-left:1px solid #ccc;}
+.add_body div{border-top:1px solid #ccc;}
+.add_body .add_body1{border-top:none;}
+.th_span{width:200px;border-left:none;}

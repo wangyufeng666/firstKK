@@ -1,0 +1,12 @@
+body{background: #F5F5F5;font-family: "PingFang SC", "Helvetica Neue", Helvetica;}
+.tips_bg{padding: 0.1rem 0.2rem 0;background: #fff;font-size: 0.25rem;text-indent: 0.46rem;line-height: 0.4rem;color: #696969;}
+.tips_stand{background: #fff4cd;color: #f5921e;padding: 0.1rem 0.2rem;font-size: 0.25rem;}
+#help_main{padding-top: 0.11rem;}
+.que_ans{border: solid #dadada;border-width: 1px 0 1px 0;margin-top: 0.1rem;background: #fff;}
+.que_ans .text_container{margin: 0 0.29rem;}
+.que_ans .text_container .question_title{font-size: 0.26rem;font-weight: bold;padding: 0.24rem 0 0.15rem 0;border-bottom: 1px solid #d4d4d4;color: #262626;}
+.que_ans .text_container .question_text{margin: 0.24rem 0 0.22rem 0;color: #acacac;font-size: 0.22rem;line-height: 0.33rem;}
+.que_ans .text_container .function{color: #666;font-size: 0.26rem;}
+.common_problem{height: 0.8rem;line-height: 0.8rem;text-align: center;font-size: 0.28rem;background: #fff;}
+.more_question{text-align: center;height: 1.0rem;line-height: 1.0rem;padding: 0 0.4rem;color: blue;}
+.more_question a{color: #0E97E6;}

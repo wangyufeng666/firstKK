@@ -1,0 +1,14 @@
+
+   @page {
+     size: auto;  /* auto is the initial value */
+     margin: 0mm; /* this affects the margin in the printer settings */
+   }
+
+#printOut{border: 5px rgb(190,163,120) solid;}
+h3{text-align: center;}
+.tipText{    text-align: center;}
+.inquiry{    border: 2px rgb(231,229,223) solid;    margin: 1rem;margin-bottom: 4rem;}
+.detail{    margin: 2rem 2rem 0 2rem;}
+.header{padding-left: 1.8rem;}
+.inquiryText{padding-top: 1.2rem;}
+.inspection{    margin: 1.2rem 0 1.2rem 0;}

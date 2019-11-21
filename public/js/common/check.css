@@ -1,0 +1,11 @@
+*{margin:0;padding:0;list-style-type:none;font-size:12px;}
+a,img{border:0;}
+/* formbox */
+.formbox{width:650px;margin:0 auto;}
+.formbox li{height:40px;}
+.formbox li label{line-height:32px;width:80px;float:left;text-align:right;}
+.formbox li input.text{float:left;height:16px;font-size:12px;padding:2px;margin:3px 0 0 0;width:200px;}
+.formbox li .btnimg{height:24px;background:#ff6600;border:0;width:80px;cursor:pointer;font-size:12px;font-weight:800;color:#fff;}
+/*±ØÒªÔªËØ*/
+.wrong{width:200px;height:20px;line-height:20px;padding-left:30px;background:url(images/error_20100904.gif) no-repeat;position:absolute;font-size:12px;}
+.right{width:100px;height:20px;position:absolute;background:url(images/ok_20100904.gif) no-repeat;}

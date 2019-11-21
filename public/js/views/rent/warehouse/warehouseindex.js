@@ -1,0 +1,108 @@
+var grid;
+$().ready(function(){
+	grid = $('#grid').grid({
+		pageSize :10,
+		height:250
+		,cm : [
+			{header: "No.", dataIndex: 'R', width:'3%',sortable:false} 
+			,{header: "商品名称", dataIndex: 'STOCKNAME', width:'160px',sortable:false}
+			,{header: "商品颜色", dataIndex: 'STOCKCOLOR', width:'90px',sortable:false}
+			,{header: "所属批次", dataIndex: 'BATCHNO', width:'120px',sortable:false,
+				renderer:function(value, data, rowIndex, colIndex, metadata){
+					var batchNo = data['BATCHNO'];
+					return '<a class="a_link" href="javascript:showbatchproducts(\''+batchNo+'\')">'+data['BATCHNO']+'</a>';
+				}
+			}
+			,{header: "入库时间", dataIndex: 'INTIME', width:'120px',sortable:false}
+			,{header: "入库操作人", dataIndex: 'INUSERID', width:'60px',sortable:false}
+			,{header: "出库时间", dataIndex: 'OUTTIME', width:'120px',sortable:false}
+			,{header: "出库操作人", dataIndex: 'USERNAME', width:'60px',sortable:false}
+			,{header: "采购商", dataIndex: 'PURCHASERS', width:'65px',sortable:false}
+			,{header: "采购金额", dataIndex: 'AMOUNT', width:'65px',sortable:false}
+			,{header: "机器码", dataIndex: 'MECHINENO', width:'100px',sortable:false}
+			,{header: "订单状态", dataIndex: 'STATUS', width:'65px',sortable:false}
+    ]
+    ,url : '/rent/warehouse/productslist'
+  });
+});
+
+/**
+ * 跳转到新增租赁库存界面
+ */
+function addWarehouseRecord(){
+	layer.open({
+		type:2,
+		title:'新增租赁库存',
+		shadeClose:false,
+		shade:0.8,
+		content:'/rent/warehouse/addproducts',
+		area:['600px','300px'],
+		close:function(index){
+			layer.close(index);
+		}
+	});
+}
+
+/**
+ * 租赁详情
+ * @param orderNo
+ * @return
+ */
+function rentInfo(cartNo){
+	window.location.href = "/rent/rent/rentinfo?cartNo="+cartNo;
+}
+
+function getParams(){
+	return {
+		stockName:$('#stockName').val(),
+		status:$('#status').val(),
+	};
+}
+
+function doSearch(){
+	var index = layer.load('数据加载中...',1);
+	grid.query(getParams());
+	layer.close(index);
+}
+
+function errorBox(msg){
+	$.layer({
+		title:'错误',
+		area : ['280px','auto'],
+		dialog : {msg:msg, type:8}
+	});
+}
+
+function showbatchproducts(batchNo){
+	layer.open({
+		type:2,
+		title:'批次商品列表',
+		content:'/rent/warehouse/batchproducts?batchNo='+batchNo,
+		area:['90%', '90%']
+	});
+}
+
+/**
+ * 导出销售订单
+ */
+function downOrder(){
+	var param = '';
+	param += 'stockName=' + $('#stockName').val();
+	param += '&status=' + $('#status').val();
+	window.location.href = '/rent/warehouse/productsexport?'+param;
+	return false; //截取返回false就不会保存网页了
+}
+/**
+ * 关闭弹框
+ */
+function closeLayer(){
+	layer.closeAll('iframe');
+}
+
+/**
+ * 重新加载
+ */
+function reload(){
+	layer.closeAll('iframe');
+	grid.reload();
+}

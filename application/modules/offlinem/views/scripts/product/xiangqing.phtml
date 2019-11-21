@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="minimal-ui,width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="format-detection" content="telephone=no">
+    <meta http-equiv="x-rim-auto-match" content="none">
+    <title>商品管理</title>
+    <meta name="keywords" content="线下,线下系统,线下以旧换新,线下系统以旧换新"/>
+    <meta name="description" content="线下,线下系统,线下以旧换新,线下系统以旧换新"/>
+    <link type="text/css" rel="stylesheet" href="/css/common/common.min.css?v=<?php echo v_css;?>"/>
+    <link rel="stylesheet" type="text/css" href="/css/common/new0917/common.min.css?v=<?php echo v_css;?>"/>
+    <link rel="stylesheet" type="text/css" href="/css/offlinem/trade/orders.min.css?v=<?php echo v_css;?>"/>
+    <script type="text/javascript" src="<?php echo IMG01_DOMAIN; ?>/common/jquery-1.11.2.min.js"></script>
+    <script type="text/javascript" src="/js/jquery-1.8.2.min.js"></script>
+    <style type="text/css">
+
+        .xiugai{float: right;
+            margin-right: 0.2rem;}
+        .shanchu{float:right;
+            margin-right: 0.2rem;
+        }
+        .xiugais{
+            float:right;
+            margin-right: 0.2rem;
+        }
+        .questions{background:#ededed;}
+        .questions dl{margin-top:.2rem;background:#fff;padding-left:.3rem;padding:.3rem 0 .2rem .3rem;}
+        .questions dl:first-child{margin-top:0rem;}
+        .questions dl dt{font-size:.28rem;color:#333;border-bottom:1px solid #e6e6e6;padding:0 .3rem .2rem 0;}
+        .questions dl dd{font-size:.22rem;color:#666;line-height:.38rem;padding:.1rem .3rem .1rem 0rem;}
+        .loginout{display:block;width:80%;margin:0.8rem auto;line-height:0.8rem;text-align:center;background:#FF1744;color:#fff;font-size:0.25rem;border-radius:0.05rem;}
+    </style>
+</head>
+<body id="ydmBody">
+<div class="header">
+    <div id="headerGoBack" class="left"><div class="back"></div></div>
+    <h1>商品管理</h1>
+    <a href="" ><div id="goHomePage" class="right"><div class="goHome"></div></div></a>
+</div>
+<form id="addUserForm" name="addUserForm" action="/offlinem/fenxiang/" method="post">
+    <div id="ordersArea">
+        <ul id="orderlist" class="orderlist offline">
+            <?php
+            if($this->list){
+                foreach($this->list as $k=>$o){
+                    $name= $o['ID'];
+                    $telnumber= $o['PINLEI'];
+                    $province=$o['PINPAI'];
+                    $city= $o['YANSE'];
+                    $class=$o['NEICUN'];
+                    $image=$o['IMAGE'];
+                    $jiage=$o['JIAGE'];
+                    $putway=$o['PUTWAY'];
+                    $state=$o['STATE'];
+                    $zanwu='/images/common/暂无图片.jpg';
+                    ?>
+                    <li class="li" >
+                        <div class="oibody">
+                                <div id="mername" class="mername">
+                                    <div><img style="width: 60px;height: 60px;float: right" src="<?php if($image){ echo $image; }else{ echo $zanwu;   }       ?>" /></div>
+                                <div  id="name"  class="name"> <?php
+                                    if($state=='在发售'){
+                                    echo $name.'&#8194;'.'&#8194;' .$telnumber.'('.$province.')'.'<br/>'.'&#8194;'.'&#8194;' .'&#8194;'.$state;}
+                                    else{echo $name.'&#8194;'.'&#8194;' .$telnumber.'('.$province.')';}
+                                    ?></div>
+
+                            </div>
+
+                        </div>
+                        <div class="oibody">
+                            <?php if($state=='在发售'){ ?>
+                           <div class="mername">
+                                <div class="name"><?php  if($putway=='no'){echo  $city.'-' .$class.'-'.$jiage.'元'.'<br />'.'状态：('.'未上架'.')';    }  else{
+
+                                        echo  $city.'-' .$class.'-'.$jiage.'元'.'<br/>'.'状态：('.'已上架'.')';
+                                    }                   ?></div>
+
+
+                                <div id= <?php    if($putway=='no')      { echo 'shangjia';  }  else  {echo 'xiajia';}  ?> class="xiugai"  order-number='<?php echo $name;?>' >
+                                    <?php    if($putway=='no')      {
+                                      echo '上架'; }else{  echo '下架';   }  ?>
+                                </div>
+
+
+                                <div id="shanchu" class="shanchu" orders-numberss='<?php echo $name;?>' >删除</div>
+                               <div id="xiugais" class="xiugais" orders-numbers='<?php echo $name;?>' >修改</div>
+
+                            </div>
+                            <?php }else{ ?>
+                                <div   class="mername">
+                                    <div class="name"><?php echo  $city.'-' .$class.'-'.$jiage.'元'; ?></div>
+                                    <div id="xiangqings" orderid="<?php echo $name;?>" class="xiugai" style="color: #FF1744;padding-top: 0.2rem;" >已卖出,点击查看</div>
+                                </div>
+
+
+                            <?php }?>
+                        </div>
+                    </li>
+                <?php } }else{ ?>
+                <li class="noresult">
+                    <div class="text">暂无商品信息</div>
+                </li>
+            <?php }?>
+        </ul>
+    </div>
+</form>
+<div class="loginout">
+    <a href="/offlinem/product/order">新增商品</a>
+</div>
+
+</body>
+<script type="text/javascript" src="/js/view/partner/common/common.min.js?v=<?php echo v_js;?>"></script>
+
+<script type="text/javascript">
+    $().ready(function() {
+        $(document).on('click', '#shanchu', function (result) {
+            var nameq = $(this).attr('orders-numberss');
+
+            if(confirm("确认删除该条记录吗(●ˇ∀ˇ●)？")){
+                $.post('/offlinem/product/delete', {id: nameq}, function (result) {
+                    if (result == 'Y') {
+                        // parent.reload();
+                        window.parent.location.reload()
+                    } else {
+                        alert('删除失败');
+                    }
+                });
+
+            };
+        });
+
+    });
+</script>
+
+<script type="text/javascript">
+
+    $().ready(function() {
+        $(document).on('click', '#shangjia', function (result) {
+            var nameq = $(this).attr('order-number');
+
+            if(confirm("确认上架吗(●ˇ∀ˇ●)？")){
+                $.post('/offlinem/product/shangjia', {id: nameq}, function (result) {
+                    if (result == 'Y') {
+                        // parent.reload();
+                        window.parent.location.reload()
+                    } else {
+                        alert('失败');
+                    }
+                });
+
+            };
+        });
+
+    });
+</script>
+<script type="text/javascript">
+
+    $().ready(function() {
+        $(document).on('click', '#xiajia', function (result) {
+            var nameq = $(this).attr('order-number');
+
+            if(confirm("确认下架吗(●ˇ∀ˇ●)？")){
+                $.post('/offlinem/product/xiajia', {id: nameq}, function (result) {
+                    if (result == 'Y') {
+                        // parent.reload();
+                        window.parent.location.reload()
+                    } else {
+                        alert('失败');
+                    }
+                });
+
+            };
+        });
+
+    });
+</script>
+<script type="text/javascript">
+
+    $().ready(function() {
+        $(document).on('click', '#xiugais', function (result) {
+            var nameqq = $(this).attr('orders-numbers');
+
+
+            $.post('/offlinem/product/xiugais', {id:nameqq}, function (result) {
+                // content:"/system/user/editusers?userId="+userId,
+                window.location.href = '/offlinem/product/xiugais?id='+nameqq
+            });
+
+
+        });
+
+    });
+</script>
+<script type="text/javascript">
+    $(document).on('click', '#xiangqings', function() {
+        var orderNo = $(this).attr('orderid');
+        window.location.href = '/offlinem/product/xiangqings?id='+orderNo;
+    })
+</script>
+</html>

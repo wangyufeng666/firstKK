@@ -1,0 +1,75 @@
+@CHARSET "UTF-8";
+
+.province{
+    
+    margin-top: 2px;    
+}
+
+.district{
+
+    margin-left: 20px;
+}
+
+.province_button, .city_button{
+    margin-left: 70%;
+}
+
+.province_button button {
+    height: 25px;
+    width: 67px;
+    font-size: 14px;
+}
+
+.city_button button {
+    height: 19px;
+    width: 55px;
+    font-size: 10px;
+}
+
+.district_name {
+	font-size: 10px;
+    margin-left: 10px;	
+}
+
+.district_name input{
+    margin-left: 5px;
+}
+
+.province_name{
+    background-image: url(/images/areamanger_bar.png);
+    height:20px;
+    background-repeat: repeat-x;
+    padding-left: 5px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-radius: 6px;
+    border-style:solid;
+    border-color: #b6b6b6;
+    font-weight:bold;
+    color:#5378BC;
+    border-width: 1px;
+}
+
+.city_name{
+    color:5378BC;
+    background-color: #E2E7F6;
+    border-style:solid;
+    border-width:1px;
+    border-color:8894B1;
+    margin-top:1px;
+    margin-left: 10px;
+    margin-right: 10px;
+    font-weight:200;
+    font-size: 13px;
+}
+
+.submit_button{
+	margin-left: 95%;
+}
+
+.back_button{
+	height: 40px;
+    width: 80px;
+	margin-left: 80%;
+	margin-bottom: 20px;
+}

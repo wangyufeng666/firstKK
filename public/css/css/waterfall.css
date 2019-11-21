@@ -1,0 +1,21 @@
+
+body{text-align:center;}
+/*Download by http://www.codefans.net*/
+#stage{ margin:0 auto; padding:0; width:880px; }
+#stage li{ margin:0; padding:0; list-style:none;float:left; width:220px;}
+#stage li div{ font-size:12px; padding:10px; color:#999999; text-align:left; }
+.manu {
+		padding: 3px; margin: 3px; text-align: center;
+	}
+	.manu a {
+		border:#eee 1px solid; margin: 2px; padding:2px 5px; color: #036cb4; text-decoration: none;
+	}
+	.manu a:hover {
+		border:#999 1px solid;color: #666;
+	}
+	.manu a:active {
+		border:#999 1px solid;color: #666;
+	}
+	.manu .current {
+		border:#036cb4 1px solid; padding:2px 5px; font-weight: bold; margin: 2px; color: #fff; background-color: #036cb4
+	}

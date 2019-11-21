@@ -1,0 +1,25 @@
+.stepItems {padding:0 30px;}
+.stepItems .stepItem{padding:20px 0;border-bottom:1px solid #dfdfdf;}
+.stepItems .stepItem .title {text-align:left;padding:10px 0;position:relative;cursor:pointer;margin-right:40px;}
+.stepItems .stepItem .title b {font-weight:normal;font-size:18px;color:#616161;}
+.stepItems .stepItem.selected .title b{background:url(/images/bg_img/checked.png) no-repeat left;padding-left:25px;
+-moz-background-size:20px 20px;-webkit-background-size:20px 20px;-o-background-size:20px 20px;background-size:20px 20px;}
+.stepItems .stepItem .title .showText {padding-left:10px;color:#d80c18;font-size:12px;line-height:20px;}
+.stepItems .stepItem .remind{padding:5px 10px;margin-bottom:10px;background:#fff4e8;color:#fb5c49;border:1px solid #E5DD41;display:inline-block;}
+.stepItems .stepItem .title .go {position:absolute;top:12px;right:-20px;display:inline-block;width:20px;height:20px;}
+.stepItems .stepItem .title.open .go {background:url("/images/bg_img/arrows-b.png");}
+.stepItems .stepItem .title.close .go {background:url("/images/bg_img/arrows-r.png");}
+.stepItems .stepItem .title.close .closeBtn{display:none;}
+.stepItems .stepItem .cards {list-style-type:none;position:relative;}
+.stepItems .cards .card {float:left;margin:10px;width:250px;border:1px solid #cccccc;overflow:hidden;text-align:center;cursor:pointer;zoom:1;}
+.stepItems .cards .ccard{width:200px;}
+.stepItems .cards .card.selected{border:1px solid #ff2222;background:url(/images/bg_img/selected.png) no-repeat right bottom;background-size:16px 16px;}
+.stepItems .cards .card.selected .text{color:#ff2222;}
+.stepItems .cards .card .text {font-size:14px;line-height:30px;color:#424242;height:60px;overflow:hidden;margin:20px 10px;}
+.stepItems .cards .card .text2 {line-height:60px;}
+.stepItems .cards .card .descp {margin:10px;font-size:13px;color:#757575}
+.stepItems .cards .card .descp i {color:#ffac13;font-style:normal}
+.stepItems .cards .card:hover {border:1px solid #ff2222;}
+.stepItems .cards .card.active {border:1px solid #e53935;background-color:#fff;cursor:default;}
+.stepItems .cards .closeArea{right:0px;position:absolute;top:10px;}
+.stepItems .cards .closeArea .closeBtn{height:30px!important;line-height:30px;cursor:pointer;width:30px;text-align:center;background:#F8730A;color:white;}

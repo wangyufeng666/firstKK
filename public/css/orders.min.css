@@ -1,0 +1,36 @@
+body{margin:0 auto;width:1200px;font-family:'微软雅黑','Microsoft YaHei','黑体',Helvetica,Arial;font-size:14px;}
+.ydm-order-box a{color:black;}
+.ydm-order-box a:hover{color:red;text-decoration:underline;}
+.ydm-order-box .order-hd .title{font-size:12px;font-weight:400;line-height:40px;color:#333;font-family:SimSun;}
+a:hover{color:#FF3C3C;}
+.order-detail-list .order-detail-item{margin-top:-1px;}
+.order-detail-list .order-detail-item .noresult{text-align:center;font-size:16px;padding:40px;border:1px solid #dfdfdf;}
+.order-detail-tab {border-collapse:collapse;border:none;width:100%;color:#333;border-spacing:0;}
+.order-detail-tab  td{border:1px solid #dfdfdf;}
+.order-detail-tab thead {display:table-header-group;vertical-align:middle;border-color:inherit;}
+.order-detail-tab .head-info .content{background:#fafafa;padding:10px 20px;line-height:24px;height:24px;position:relative;font-size:14px;}
+.order-detail-tab .head-info .orderno{font-size:13px;color:#06c;}
+.order-detail-tab .head-info .orderno:hover{color:#FF3C3C;text-decoration:underline;}
+
+.order-detail-tab .head-info .content .expressnum{position:absolute;top:10px;right:20px;}
+.order-detail-tab .head-info .content .expressnum img:hover{cursor:pointer;}
+.order-detail-tab .col-price{width:250px;text-align:center;vertical-align:middle;}
+.order-detail-tab .col-price span{display:block;line-height:24px;}
+.order-detail-tab .col-price .price{font-size:16px;color:#FF4B00;font-weight:bold;}
+.order-detail-tab .col-price .event{font-size:12px;color:#373737;}
+.order-detail-tab .col-oper{width:120px;text-align:center;vertical-align:middle;}
+.order-detail-tab .col-oper .search{color:#06c;font-size:12px;text-decoration:none;line-height:20px;display:block;}
+.order-detail-tab .merinfo .img{width:80px;float:left;margin:10px;}
+.order-detail-tab .merinfo .info{float:left;padding:20px 10px;line-height:30px;width:300px;}
+.order-detail-tab .merinfo .info .price{color:#FF4B00;}
+.order-detail-tab .tradeinfo{width:150px;text-align:center;}
+.order-detail-tab .tradeinfo span{color:#999;line-height:24px;display:block;}
+.order-detail-tab .tradeinfo .status{color:#FF3C3C;}
+.pageNav {vertical-align:middle}
+.pageNav a:link,.pageNav a:visited {display:block;margin-right:4px;background:#FFFFFF;border:1px solid #F2F2F2;background:#fafafa;color:#999;font-size:16px;text-align:center;width:30px;height:30px;float:left;line-height:30px;text-decoration:none;}
+.pageNav a:hover,.pageNav a:active {display:block;margin-right:4px;background:#E0524B;border:1px solid #F2855F;color:#fff;width:30px;height:30px;text-decoration:none}
+.pageNav span {float:left;width:30px;height:16px;margin-right:4px;overflow:hidden;padding:8px 0;border:1px solid #F2F2F2;background:#fafafa;color:#999;font-size:16px;font-family:'微软雅黑','Microsoft YaHei','黑体',Helvetica,Arial;text-align:center;}
+.pageNav span.otherPage{border:none;background:none;letter-spacing:2px;font-weight:bold;font-family:'微软雅黑','Microsoft YaHei','黑体',Helvetica,Arial;}
+.pageNav a.curPage {border:1px solid #F2855F;background:#E0524B;color:#ffffff;}
+.pageNav a.fstPage, .pageNav a.nextPage{width:60px;white-space:nowrap;}
+.writeExp{cursor:pointer;vertical-align:text-bottom;}

@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta content="width=device-width,minimum-scale=1.0,maximum-scale=1.0" name="viewport" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta content="telephone=no" name="format-detection" />
+    <title>交易信息填写</title>
+    <link rel="stylesheet" type="text/css" href="/css/common/new0917/common.min.css?v=<?php echo v_css;?>"/>
+    <link type="text/css" rel="stylesheet" href="/css/offlinem/order/createorder.min.css?v=<?php echo v_css;?>">
+    <script type="text/javascript" src="<?php echo IMG01_DOMAIN; ?>/common/jquery-1.11.2.min.js"></script>
+    <script type="text/javascript" src="/js/layer/v3.0/layer.js"></script>
+</head>
+<body ydm-recycle-spm="ydmM06_loading">
+<div id="slideMask" class="slide-mask"></div>
+
+<div class="login_slide hide"></div>
+<div id="mainContent" class="ydm_container_box">
+    <div id="head" class="header">
+        <div id="headerGoBack" class="left"><div class="back"></div></div>
+        <span>提交回收单</span>
+        <a href="/offlinem/product/index"><div id="goHomePage" class="right"><div class="goHome"></div></div></a>
+    </div>
+    <?php   foreach($this->list as $k=>$o){
+        $id= $o['ID'];
+        $pinlei= $o['PINLEI'];
+        $pinpai=$o['PINPAI'];
+        $yanse= $o['YANSE'];
+        $neicun=$o['NEICUN'];
+        $image=$o['IMAGE'];
+        $jiage=$o['JIAGE'];
+        $putway=$o['PUTWAY'];
+        $state=$o['STATE'];
+        $zanwu='/images/common/暂无图片.jpg';
+    }
+
+
+    ?>
+<input type="hidden" id="ids" value="<?php echo $id;?>" />
+    <div class="price_box_item">
+        <div class="p_inner clearfix">
+            <div class="left_box left">
+                <div class="box_inner boxssss thembg">
+                    <div class="p_top_box clearfix">
+                        <div class="p_mername left"  style=' text-align:center'><?php echo $pinpai.'('.$yanse.'-'.$neicun.')';?></div>
+
+                    </div>
+                    <div class="p_conPrice">
+                        <div style="float: left; "><img style="width: 100px;height:100px;" src='<?php if($image){echo $image;}else{echo $zanwu;}?>'/></div>
+                      <?php
+                        echo $jiage.'元';
+                        ?>
+
+
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="create_order_box">
+
+            <div class="tradeway_box">
+                <div class="trade_tips">
+                    <div  class="typeway  on immediately"><div class="tips_h" style="">去选择地址<div id="xiugai" onclick="see()" style="float: right" order-id="<?php echo $id;?>">
+                                <img src="https://alicdn01.youdemai.com/images/ydmapp/common/icon/new_icon_right.png" /></div></div></div>
+                </div>
+<?php
+if($this->lists) {
+
+    foreach ($this->lists as $k => $v) {
+        $name = $v['NAME'];
+        $tel = $v['TELNUMBER'];
+        $detail = $v['PROVINCE'] . $v['CITY'] . $v['CLASS'];
+    }
+}
+?>
+
+
+    <div class="userinfo_box">
+        <div class="user clearfix">
+            <div class="left">姓 &nbsp; &nbsp;名</div>
+            <div class="right input"><input type="text" maxlength="10" id="contacts" class="contacts" name="contacts" value="" placeholder="输入您的姓名" /></div>
+
+        </div>
+        <div class="user clearfix">
+            <div class="left">手机号</div>
+            <div class="right input"><input type="text" maxlength="20" id="contactWay" class="contactWay"  value="" placeholder="输入手机号码" /></div>
+
+        </div>
+
+    </div>
+    <div class="address_box">
+        <div class="box typeway expressdoor on clearfix">
+            <div class="left">详细地址</div>
+            <div class="right"><input type="text" maxlength="100" id="detailaddress" name="detailaddress" value="" placeholder="输入详细地址" autocomplete="off" /></div>
+        </div>
+    </div>
+
+
+
+
+    </div>
+
+    <div class="order_btm" id="orderbtm">
+        <div class="order_inner clearfix">
+            <div class="left price_btm">回收总价：<span class="themcolor orderprice pfb"  >¥<?php echo $jiage; ?></span></div>
+            <div class="right pfb subnit thembg" style="background: #CC0000" onclick="goumai()">购买</div>
+        </div>
+    </div>
+<input id="jiages" type="hidden" value="<?php echo $jiage;?> " />
+</body>
+<script type="text/javascript" src="/js/view/offlinem/common/common.min.js?v=<?php echo v_js;?>"></script>
+<script type="text/javascript">
+
+function see() {
+    parent.layer.open({
+        type: 2,//弹窗类型 ['dialog', 'page', 'iframe', 'loading', 'tips']
+        area: ['100%', '100%'],
+        shift: 2,//可选动画类型0-6
+        scrollbar: false,
+        title: false,
+        closeBtn: false,
+        content: '/offlinem/product/dizhi',
+        btn: ['确定', '取消'],
+        //这里yes:function为设置的第一个按钮的function，后面设置的按钮默认点击关闭
+        yes: function (index, layero) {
+            //需要回显的值
+            //layero为当前的DOM对象，去找打开的iframe转成DOM对象调用子页面其中的function (callbackdata)
+            var res = $(layero).find("iframe")[0].contentWindow.callbackdata();
+            //把回显的值赋给需要显示的地方
+            $("#contacts").val(res.data_name1);
+            $("#contactWay").val(res.data_name2);
+            $("#detailaddress").val(res.data_name3);
+            //关闭子页面
+            parent.layer.close(index);
+        }
+    });
+
+}
+</script>
+<script type="text/javascript">
+    function goumai() {
+        $(document).ready(function () {
+            var params={};
+            params.jiage = $('#jiages').val();
+            params.contacts = $('#contacts').val();
+            params.contactWay = $('#contactWay').val();
+            params.detailaddress = $('#detailaddress').val();
+            params.ids=$('#ids').val();
+
+
+            var id=$('#ids').val();
+            $.post('/offlinem/product/buybaocun',params, function (result) {
+                window.location.href = '/offlinem/product/buys?id='+id ;
+            });
+
+        });
+    }
+
+
+</script>
+
+</html>
